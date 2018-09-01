@@ -1,0 +1,11 @@
+{
+   "editor.fontSize": 16, 
+   "http.proxy": "http://127.0.0.1:1087",
+   "go.lintTool": "gometalinter",
+   "go.testFlags": ["-v"],
+    "go.lintFlags": ["--config=${workspaceRoot}/.gometalinter"],
+
+    "vim.useCtrlKeys": true,
+    "workbench.colorTheme": "Base16 Dark Monokai",
+    "python.jediEnabled": false
+}
