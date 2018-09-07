@@ -1,0 +1,34 @@
+[
+    {
+        "key": "cmd+shift+k",
+        "command": "workbench.action.navigateBack"
+    },
+    {
+        "key": "cmd+shift+j",
+        "command": "workbench.action.navigateForward"
+    },
+    {
+        "key": "alt+cmd+b",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "cmd+b",
+        "command": "editor.action.goToDeclaration",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+shift+k",
+        "command": "editor.action.format",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+f",
+        "command": "cursorRight",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "extension.vim_ctrl+f",
+        "when": "editorTextFocus"
+    }
+]

@@ -1,0 +1,7 @@
+[
+
+    { "keys": ["super+b"], "command": "goto_definition" },
+    { "keys": ["super+shift+k"], "command": "jump_back" },
+    { "keys": ["suer+shift+j"], "command": "jump_forward" }
+]
+

@@ -1,11 +1,22 @@
 {
-   "editor.fontSize": 16, 
-   "http.proxy": "http://127.0.0.1:1087",
-   "go.lintTool": "gometalinter",
-   "go.testFlags": ["-v"],
-    "go.lintFlags": ["--config=${workspaceRoot}/.gometalinter"],
-
+    "editor.fontSize": 15,
     "vim.useCtrlKeys": true,
-    "workbench.colorTheme": "Base16 Dark Monokai",
-    "python.jediEnabled": false
+    "workbench.editor.enablePreview": false,
+    "workbench.startupEditor": "none",
+    "window.nativeTabs": true,
+    "http.proxy": "http://127.0.0.1:1087",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "python.pythonPath": "/Users/andyz/dev/py3/bin/python",
+    "extensions.ignoreRecommendations": false,
+    "go.lintTool": "gometalinter",
+    "go.lintFlags": [
+        "--config=${workspaceRoot}/.gometalinter"
+    ],
+    "go.testFlags": ["-v"],
+    "breadcrumbs.enabled": true,
+    "files.autoSave": "afterDelay",
+    "python.formatting.provider": "autopep8",
+    "editor.formatOnSave": true,
+    "workbench.colorTheme": "Base16 Dark Monokai"
 }
