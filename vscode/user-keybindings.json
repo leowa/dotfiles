@@ -17,11 +17,6 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "cmd+shift+k",
-        "command": "editor.action.format",
-        "when": "editorTextFocus"
-    },
-    {
         "key": "ctrl+shift+f",
         "command": "cursorRight",
         "when": "editorTextFocus"
