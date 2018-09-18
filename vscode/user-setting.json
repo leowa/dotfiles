@@ -13,6 +13,9 @@
     "go.lintFlags": [
         "--config=${workspaceRoot}/.gometalinter"
     ],
+    "python.linting.flake8Args": [
+        "--ignore=E501"
+    ],
     "go.testFlags": ["-v"],
     "breadcrumbs.enabled": true,
     "files.autoSave": "afterDelay",
