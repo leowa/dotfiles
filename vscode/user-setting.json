@@ -11,7 +11,7 @@
     "extensions.ignoreRecommendations": false,
     "go.lintTool": "gometalinter",
     "go.lintFlags": [
-        "--config=${workspaceRoot}/.gometalinter"
+        "--config=${workspaceRoot}/.gometalinter.json"
     ],
     "python.linting.flake8Args": [
         "--ignore=E501"
