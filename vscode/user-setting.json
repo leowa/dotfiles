@@ -21,5 +21,6 @@
     "files.autoSave": "afterDelay",
     "python.formatting.provider": "autopep8",
     "editor.formatOnSave": true,
+    "files.insertFinalNewline": true,
     "workbench.colorTheme": "Base16 Dark Monokai"
 }
