@@ -13,6 +13,7 @@
     "go.lintFlags": [
         "--config=${workspaceRoot}/.gometalinter.json"
     ],
+    "python.linting.pylintEnabled": true,
     "python.linting.flake8Args": [
         "--ignore=E501"
     ],
