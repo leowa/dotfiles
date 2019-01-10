@@ -13,9 +13,10 @@
     "go.lintFlags": [
         "--config=${workspaceRoot}/.gometalinter.json"
     ],
-    "python.linting.pylintEnabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false,
     "python.linting.flake8Args": [
-        "--ignore=E501"
+        "--ignore=E501,E202,E0202"
     ],
     "go.testFlags": [
         "-v"
@@ -23,9 +24,6 @@
     "breadcrumbs.enabled": true,
     "files.autoSave": "afterDelay",
     "python.formatting.provider": "autopep8",
-    "python.formatting.autopep8Args": [
-        ""
-    ],
     "editor.formatOnSave": true,
     "files.insertFinalNewline": true,
     "workbench.colorTheme": "Base16 Dark Monokai",
