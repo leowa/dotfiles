@@ -17,16 +17,20 @@
     "python.linting.flake8Args": [
         "--ignore=E501"
     ],
-    "go.testFlags": ["-v"],
+    "go.testFlags": [
+        "-v"
+    ],
     "breadcrumbs.enabled": true,
     "files.autoSave": "afterDelay",
     "python.formatting.provider": "autopep8",
+    "python.formatting.autopep8Args": [
+        ""
+    ],
     "editor.formatOnSave": true,
     "files.insertFinalNewline": true,
     "workbench.colorTheme": "Base16 Dark Monokai",
     "[go]": {
         "editor.insertSpaces": true,
         "editor.formatOnSave": false
-    },
-    "editor.formatOnSave": true,
+    }
 }
