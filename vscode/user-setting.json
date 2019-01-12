@@ -15,9 +15,6 @@
     ],
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
-    "python.linting.flake8Args": [
-        "--ignore=E501,E202,E0202"
-    ],
     "go.testFlags": [
         "-v"
     ],
