@@ -4,7 +4,7 @@
     "workbench.editor.enablePreview": false,
     "workbench.startupEditor": "none",
     "window.nativeTabs": true,
-    "http.proxy": "http://127.0.0.1:1087",
+    "http.proxy": "http://10.0.3.36:1088",
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "python.pythonPath": "/Users/andyz/dev/py3/bin/python",
@@ -26,6 +26,19 @@
     "workbench.colorTheme": "Base16 Dark Monokai",
     "[go]": {
         "editor.insertSpaces": true,
+        "editor.formatOnSave": true
+    },
+    "[yaml]": {
         "editor.formatOnSave": false
-    }
+    },
+    "[python]": {
+        "editor.formatOnSave": true
+    },
+    "vs-kubernetes": {
+        "vs-kubernetes.minikube-path": "/Users/andyz/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
+    },
+    "editor.detectIndentation": false,
+    "python.jediEnabled": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
