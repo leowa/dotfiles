@@ -9,9 +9,9 @@
     "explorer.confirmDragAndDrop": false,
     "python.pythonPath": "/Users/andyz/dev/py3/bin/python",
     "extensions.ignoreRecommendations": false,
-    "go.lintTool": "gometalinter",
+    "go.lintTool": "golangci-lint",
     "go.lintFlags": [
-        "--config=${workspaceRoot}/.gometalinter.json"
+        "--fast"
     ],
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
