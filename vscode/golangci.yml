@@ -44,7 +44,7 @@ run:
   # If invoked with -mod=vendor, the go command assumes that the vendor
   # directory holds the correct copies of dependencies and ignores
   # the dependency descriptions in go.mod.
-  modules-download-mode: readonly|release|vendor
+  # modules-download-mode: readonly|release|vendor
 
 
 # output configuration options
@@ -201,6 +201,7 @@ issues:
   # excluded by default patterns execute `golangci-lint run --help`
   exclude:
     - abcdef
+    - Error return value of .* is not checked
 
   # Excluding configuration per-path, per-linter, per-text and per-source
   exclude-rules:

@@ -7,20 +7,16 @@
     "http.proxy": "http://127.0.0.1:1087",
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
-    "python.pythonPath": "/Users/andyz/dev/py3/bin/python",
     "extensions.ignoreRecommendations": false,
     "go.lintTool": "golangci-lint",
     "go.lintFlags": [
         "--fast"
     ],
-    "python.linting.flake8Enabled": true,
-    "python.linting.pylintEnabled": false,
     "go.testFlags": [
         "-v"
     ],
     "breadcrumbs.enabled": true,
     "files.autoSave": "afterDelay",
-    "python.formatting.provider": "autopep8",
     "editor.formatOnSave": true,
     "files.insertFinalNewline": true,
     "[go]": {
@@ -30,14 +26,24 @@
     "[yaml]": {
         "editor.formatOnSave": false
     },
-    "[python]": {
-        "editor.formatOnSave": true
-    },
     "vs-kubernetes": {
         "vs-kubernetes.minikube-path": "/Users/andyz/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
     },
     "editor.detectIndentation": false,
+    "python.pythonPath": "/Users/andyz/dev/py3/bin/python",
     "python.jediEnabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.formatting.provider": "autopep8",
+    "[python]": {
+        "editor.formatOnSave": true
+    },
     "editor.suggestSelection": "first",
     "workbench.colorTheme": "Base16 Dark Monokai",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
 }
