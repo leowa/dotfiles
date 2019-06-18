@@ -27,23 +27,23 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "shift+r shift+r",
-        "command": "python.datascience.execSelectionInteractive",
-        "when": "editorFocus && python.datascience.featureenabled && python.datascience.ownsSelection && !findInputFocussed && !replaceInputFocussed && editorLangId == 'python'"
-    },
-    {
         "key": "shift+enter",
         "command": "-python.datascience.execSelectionInteractive",
         "when": "editorFocus && python.datascience.featureenabled && python.datascience.ownsSelection && !findInputFocussed && !replaceInputFocussed && editorLangId == 'python'"
     },
     {
-        "key": "shift+r shift+r",
-        "command": "python.execSelectionInTerminal",
-        "when": "editorFocus && !findInputFocussed && !python.datascience.ownsSelection && !replaceInputFocussed && editorLangId == 'python'"
-    },
-    {
         "key": "shift+enter",
         "command": "-python.execSelectionInTerminal",
         "when": "editorFocus && !findInputFocussed && !python.datascience.ownsSelection && !replaceInputFocussed && editorLangId == 'python'"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-python.datascience.runcurrentcell",
+        "when": "editorFocus && python.datascience.featureenabled && python.datascience.hascodecells && !editorHasSelection"
+    },
+    {
+        "key": "shift+enter",
+        "command": "-python.datascience.runcurrentcelladvance",
+        "when": "editorFocus && python.datascience.featureenabled && python.datascience.hascodecells && !editorHasSelection"
     }
 ]
