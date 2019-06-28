@@ -15,8 +15,11 @@
     "go.testFlags": [
         "-v"
     ],
-    "breadcrumbs.enabled": true,
+    "breadcrumbs.enabled": false,
     "files.autoSave": "afterDelay",
+    "python.formatting.provider": "autopep8",
+    "editor.formatOnSaveTimeout": 2000,
+    "python.formatting.autopep8Path": "/Users/andyz/dev/py3/bin/autopep8",
     "editor.formatOnSave": true,
     "files.insertFinalNewline": true,
     "[go]": {
@@ -26,8 +29,8 @@
     "[yaml]": {
         "editor.formatOnSave": false
     },
-    "vs-kubernetes": {
-        "vs-kubernetes.minikube-path": "/Users/andyz/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
+    "[python]": {
+        "editor.formatOnSave": true
     },
     "editor.detectIndentation": false,
     "python.pythonPath": "/Users/andyz/dev/py3/bin/python",
@@ -45,5 +48,5 @@
         "**/.project": true,
         "**/.settings": true,
         "**/.factorypath": true
-    },
+    }
 }
