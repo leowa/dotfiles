@@ -117,8 +117,6 @@
     ],
     "latex-workshop.latex.autoBuild.run": "onFileChange",
     "latex-workshop.chktex.delay": 50000,
-    "[tex]": {
-        "editor.formatOnSave": false
-    },
-    "files.autoSaveDelay": 10000
+    "git.countBadge": "off",
+    "files.autoSaveDelay": 500
 }
