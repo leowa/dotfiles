@@ -14,4 +14,5 @@ ln -sf $(PWD)/vscode/flake8.ini "$HOME/.config/flake8"
 ln -sf $(PWD)/vscode/golangci.yml "$(GOPATH)/.golangci.yml"
 ln -sf $(PWD)/vscode/pycodestyle.ini "$HOME/.config/pycodestyle"
 ln -sf $(PWD)/ansible/ansible.cfg ~/.ansible.cfg
+ln -sf $PWD/vim/vimrc ~/.vimrc
 ```
