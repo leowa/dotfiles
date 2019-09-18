@@ -16,7 +16,7 @@ Bundle 'Shougo/vimproc'
 Bundle 'Shougo/vimshell.vim'
 Bundle 'fatih/vim-go'
 Bundle 'nvie/vim-flake8'
-Bundle 'suan/vim-instant-markdown'
+" Bundle 'suan/vim-instant-markdown'
 " tagbar
 " Plugin 'majutsushi/tagbar'
 nmap <C-k> :TagbarToggle<CR>
@@ -28,6 +28,8 @@ Bundle 'xolox/vim-misc'
 Bundle 'alecthomas/gometalinter'
 " also need to install some go packages
 
+Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
+filetype plugin on
 filetype plugin indent on
 " set background=dark
 " colorscheme solarized
