@@ -46,12 +46,34 @@
         "**/.factorypath": true
     },
     "terminal.integrated.rendererType": "dom",
+    "latex-workshop.latex.build.forceRecipeUsage": true,
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ]
+        },
+    ],
+    "latex-workshop.latex.autoBuild.run": "onFileChange",
     "git.countBadge": "off",
     "files.autoSaveDelay": 500,
     "workbench.activityBar.visible": false,
     "workbench.statusBar.visible": false,
-    "editor.minimap.enabled": false
-    "latex-workshop.message.update.show": false,
     "editor.minimap.enabled": false,
+    "latex-workshop.message.update.show": false,
     "go.useLanguageServer": true
 }
