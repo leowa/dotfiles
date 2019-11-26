@@ -155,5 +155,6 @@ map <C-a><right> :tabn<cr>
 map bs :VimShell<cr>
 let g:vimshell_prompt_expr = 'escape(fnamemodify(getcwd(), ":~").">", "\\[]()?! ")." "'
 let g:vimshell_prompt_pattern = '^\%(\f\|\\.\)\+> '
+let g:instant_markdown_autostart = 0
 set clipboard=unnamed
 set paste

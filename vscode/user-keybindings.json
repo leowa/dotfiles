@@ -22,11 +22,6 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+f",
-        "command": "extension.vim_ctrl+f",
-        "when": "editorTextFocus"
-    },
-    {
         "key": "shift+enter",
         "command": "-python.datascience.execSelectionInteractive",
         "when": "editorFocus && python.datascience.featureenabled && python.datascience.ownsSelection && !findInputFocussed && !replaceInputFocussed && editorLangId == 'python'"
@@ -46,4 +41,31 @@
         "command": "-python.datascience.runcurrentcelladvance",
         "when": "editorFocus && python.datascience.featureenabled && python.datascience.hascodecells && !editorHasSelection"
     },
+    {
+        "key": "shift+cmd+b",
+        "command": "-editor.debug.action.toggleBreakpoint",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+cmd+j",
+        "command": "-workbench.action.search.toggleQueryDetails",
+        "when": "searchViewletVisible"
+    },
+    {
+        "key": "cmd+[",
+        "command": "-workbench.action.navigateBack"
+    },
+    {
+        "key": "cmd+]",
+        "command": "-workbench.action.navigateForward"
+    },
+    {
+        "key": "cmd+]",
+        "command": "-editor.action.indentLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+]",
+        "command": "editor.action.indentLines"
+    }
 ]
