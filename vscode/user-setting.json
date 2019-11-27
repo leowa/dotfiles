@@ -15,6 +15,7 @@
     "go.testFlags": [
         "-v"
     ],
+    "java.home": "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home",
     "breadcrumbs.enabled": false,
     "files.autoSave": "afterDelay",
     "python.formatting.provider": "autopep8",
@@ -35,8 +36,11 @@
     "[txt]": {
         "editor.insertSpaces": false
     },
+    "[erl]": {
+        "editor.formatOnSave": false
+    },
     "python.pythonPath": "/Users/andyz/dev/py3/bin/python",
-    "python.jediEnabled": false,
+    "python.jediEnabled": true,
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
     // "google-java-format.executable": "/absolute/path/to/google-java-format",
@@ -44,6 +48,7 @@
     "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
     "java.format.settings.profile": "GoogleStyle",
     "editor.suggestSelection": "first",
+    "editor.renderIndentGuides": false,
     "workbench.colorTheme": "Base16 Dark Monokai",
     "files.exclude": {
         "**/.classpath": true,
