@@ -67,5 +67,19 @@
     {
         "key": "cmd+]",
         "command": "editor.action.indentLines"
+    },
+    {
+        "key": "cmd+p",
+        "command": "-editor.action.triggerParameterHints",
+        "when": "editorHasSignatureHelpProvider && editorTextFocus"
+    },
+    {
+        "key": "cmd+p",
+        "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "key": "shift+cmd+o",
+        "command": "-workbench.action.quickOpen"
     }
 ]
