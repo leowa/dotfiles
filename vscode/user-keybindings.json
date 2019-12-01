@@ -81,5 +81,18 @@
     {
         "key": "shift+cmd+o",
         "command": "-workbench.action.quickOpen"
-    }
+    },
+    {
+        "key": "alt+f12",
+        "command": "-workbench.action.terminal.focus",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "-workbench.action.selectTheme"
+    },
+    {
+        "key": "shift+escape",
+        "command": "-workbench.action.terminal.toggleTerminal"
+    },
 ]
