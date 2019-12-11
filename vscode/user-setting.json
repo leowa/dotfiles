@@ -88,5 +88,6 @@
     "go.useLanguageServer": true,
     "java.errors.incompleteClasspath.severity": "ignore",
     "window.zoomLevel": 0,
-    "editor.folding": false
+    "editor.folding": false,
+    "go.formatTool": "goimports"
 }
