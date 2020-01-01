@@ -43,7 +43,7 @@
     "java.format.settings.profile": "GoogleStyle",
     "editor.suggestSelection": "first",
     "editor.renderIndentGuides": false,
-    "workbench.colorTheme": "Base16 Dark Monokai",
+    "workbench.colorTheme": "Material Theme Darker",
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
