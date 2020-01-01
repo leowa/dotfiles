@@ -21,7 +21,7 @@
     "python.formatting.provider": "autopep8",
     "editor.formatOnSaveTimeout": 10000,
     "python.formatting.autopep8Path": "/Users/andyz/dev/py3/bin/autopep8",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": false,
     "files.insertFinalNewline": true,
     "[go]": {
         "editor.insertSpaces": true,
@@ -32,12 +32,6 @@
     },
     "[python]": {
         "editor.formatOnSave": true
-    },
-    "[txt]": {
-        "editor.insertSpaces": false
-    },
-    "[erl]": {
-        "editor.formatOnSave": false
     },
     "python.pythonPath": "/Users/andyz/dev/py3/bin/python",
     "python.jediEnabled": true,
@@ -90,5 +84,6 @@
     "window.zoomLevel": 0,
     "editor.folding": false,
     "go.formatTool": "goimports",
-    "workbench.editor.showTabs": false
+    "workbench.editor.showTabs": false,
+    "html.format.enable": false
 }
