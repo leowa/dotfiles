@@ -30,7 +30,7 @@ SPACESHIP_PROMPT_ORDER=(
   user          # Username section
   host          # Hostname section
   git           # Git section (git_branch + git_status)
-  golang        # Go section
+#  golang        # Go section
   venv          # virtualenv section
   exec_time     # Execution time
   line_sep      # Line break
@@ -42,8 +42,9 @@ SPACESHIP_PROMPT_ORDER=(
 SPACESHIP_KUBECONTEXT_SHOW=false
 SPACESHIP_PROMPT_SEPARATE_LINE=false
 SPACESHIP_PROMPT_ADD_NEWLINE=false
-SPACESHIP_DIR_TRUNC=0
+SPACESHIP_DIR_TRUNC=4
 SPACESHIP_DIR_TRUNC_REPO=false
 SPACESHIP_GIT_STATUS_SHOW=false
 SPACESHIP_DIR_PREFIX='['
 SPACESHIP_DIR_SUFFIX=']'
+PACESHIP_EXIT_CODE_SHOW=true
