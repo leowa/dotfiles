@@ -1,8 +1,8 @@
 ########################
 # Antigen
 ########################
-source ~/dev/bb/dotfiles/zsh/antigen.zsh
-[ ~/.bash_aliases ] && source ~/.bash_aliases
+source ~/dev/bb/dotfiles/sh/antigen.zsh
+source ~/.sh_profile
 
 #antigen bundle StackExchange/blackbox
 #antigen bundle brew
