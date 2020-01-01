@@ -35,7 +35,6 @@ export HISTTIMEFORMAT='%F %T '
 
 #### brew serttings
 export HOMEBREW_NO_AUTO_UPDATE=1
-export HOMEBREW_GITHUB_API_TOKEN=ae39cbe0b1e1c447f8d4f3395128982f1eeeb251
 
 more_path=/usr/local/sbin:/usr/local/Cellar/mosquitto/1.5.8/bin/:/usr/local/opt/gnu-getopt/bin
 
