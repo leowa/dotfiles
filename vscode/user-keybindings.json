@@ -95,4 +95,16 @@
         "key": "shift+escape",
         "command": "-workbench.action.terminal.toggleTerminal"
     },
+    {
+        "key": "cmd+4",
+        "command": "workbench.view.extensions"
+    },
+    {
+        "key": "shift+cmd+x",
+        "command": "-workbench.view.extensions"
+    },
+    {
+        "key": "cmd+4",
+        "command": "-workbench.action.focusFourthEditorGroup"
+    },
 ]
