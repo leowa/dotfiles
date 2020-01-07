@@ -10,6 +10,18 @@ if [[ $SHELL =~ "bash" ]]; then
            source $(brew --prefix)/etc/bash_completion
         fi
     fi
+	#### Command history related configurations######
+	# ignore some commands from history
+	export HISTIGNORE="pwd:ls:ls -ltr:"
+	HISTCONTROL=ignoreboth
+	# format history with time 
+	export HISTTIMEFORMAT='%F %T '
+	export HISTIGNORE="pwd:ls:ls -ltr:"
+	# The resulting history line is loaded into the Readline editing buffer,
+	# allowing further modification.
+	shopt -s histverify
+	# always append histories
+	shopt -s histappend
 fi
 
 [[ -d ~/.profile.d ]] && source ~/.profile.d/*.sh
@@ -18,19 +30,6 @@ fi
 # Set  LC and LANG for tmux to accept utf-8
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-
-#### Command history related configurations######
-HISTCONTROL=ignoreboth
-# ignore some commands from history
-export HISTIGNORE="pwd:ls:ls -ltr:"
-
-# The resulting history line is loaded into the Readline editing buffer, 
-# allowing further modification.
-setopt histverify
-# always append histories
-setopt histappend
-# format history with time 
-export HISTTIMEFORMAT='%F %T '
 
 
 #### brew serttings
