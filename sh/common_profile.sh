@@ -55,3 +55,4 @@ fi
 export KUBECONFIG="/Users/andyz/.kube/config"
 export PROMPT_COMMAND='history -a'
 export PATH=$PATH:$more_path
+export PYTHONBREAKPOINT=ipdb.set_trace
