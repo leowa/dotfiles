@@ -1,10 +1,15 @@
+# load common profile
+source ~/.sh_profile
+source ~/.oh-my-zsh/lib/history.zsh
+
+zstyle ':completion:*' menu select # select completions with arrow keys
+zstyle ':completion:*' group-name '' # group results by category
+zstyle ':completion:::::' completer _expand _complete _ignored _approximate # enable approximate matches for completion
+
 ########################
 # Antigen
 ########################
 source ~/dev/bb/dotfiles/sh/antigen.zsh
-source ~/.sh_profile
-source ~/.oh-my-zsh/lib/history.zsh
-
 #antigen bundle StackExchange/blackbox
 #antigen bundle brew
 #antigen bundle command-not-found
@@ -19,10 +24,11 @@ antigen bundle history
 
 antigen bundle python
 antigen bundle tmux
-antigen bundle osx
+#antigen bundle osx
 #antigen bundle vi-mode
 
 antigen bundle zsh-users/zsh-completions
+antigen bundle z
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 #antigen bundle mafredri/zsh-async
