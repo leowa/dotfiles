@@ -1,0 +1,30 @@
+# alias for some basic tools
+alias ls="ls -G"
+alias ll="ls -lh"
+alias la="ls -lhAG"
+alias cls="clear"
+alias watch="watch "
+alias grep='grep --color=auto'
+alias ag='ag -a --hidden'
+alias diff='colordiff'
+alias ..="cd .. ; pwd;ls"
+alias ...="cd ../.. ; pwd;ls"
+alias vi="/usr/bin/vim -v"
+
+# alias for python venv
+alias ipy="source ~/dev/py/bin/activate; python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
+alias ipy3="source ~/dev/py3/bin/activate; python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
+
+# some directory shortcuts
+alias dvd="cd ~/dev/"
+
+# shorcuts for kubectl commands
+alias k="kubectl"
+alias kn="kubens"
+alias kk="kubectl --namespace kube-system"
+alias kt="kubectl --namespace test"
+alias kd="kubectl --namespace default"
+alias ka="kubectl --all-namespaces=true get po  -owide"
+
+# use color term for tmux
+alias tmux="TERM=xterm-256color tmux"

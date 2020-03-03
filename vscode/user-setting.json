@@ -4,7 +4,6 @@
     "workbench.editor.enablePreview": false,
     "workbench.startupEditor": "none",
     "window.nativeTabs": true,
-    "http.proxy": "http://127.0.0.1:1087",
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "extensions.ignoreRecommendations": false,
@@ -20,7 +19,6 @@
     "files.autoSave": "afterDelay",
     "python.formatting.provider": "autopep8",
     "editor.formatOnSaveTimeout": 10000,
-    "python.formatting.autopep8Path": "/Users/andyz/dev/py3/bin/autopep8",
     "editor.formatOnSave": false,
     "files.insertFinalNewline": true,
     "[go]": {
@@ -33,7 +31,6 @@
     "[python]": {
         "editor.formatOnSave": true
     },
-    "python.pythonPath": "/Users/andyz/dev/py3/bin/python",
     "python.jediEnabled": true,
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,

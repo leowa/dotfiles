@@ -1,0 +1,39 @@
+- hosts: localhost
+  gather_facts: false
+  any_errors_fatal: true
+  debugger: on_failed
+  tasks:
+  - name:  Configure git
+    delegate_to: localhost
+    git_config: 
+      name: "{{ item.name }}"
+      scope: global
+      value: "{{ item.value }}"
+    with_items:
+      - { name: "credential.helper",  value: "cache --timeout=3600"}
+      - { name: "credential.helper",  value: "cache --timeout=3600"}
+      - { name: "core.editor", value: "/usr/bin/vim"}
+      - { name: "user.name", value: "Andy Zhang" }
+      - { name: "user.email", value: "zch.ustc@gmail.com" }
+      - { name: "core.filemode", value: "true" }
+      # - { name: "http.proxy", value:  "http://127.0.0.1:1087" }
+      - { name: "color.diff", value: "auto" }
+      - { name: "color.status", value: "auto" }
+      - { name: "color.branch", value: "auto" }
+      - { name: "color.interactive", value: "auto" }
+      - { name: "color.ui", value: "true" }
+      - { name: "color.pager", value: "true" }
+      - { name: "alias.pr", value: "! git pull -r" }
+      - { name: "alias.aa", value: "! git commit -a --amend" }
+      - { name: "alias.rs", value: "! git reset --soft" }
+      - { name: "alias.cm", value: "commit -m" }
+  - name: check whether brew is installed
+    delegate_to: localhost
+    shell: which brew
+    register: brew_installed
+  - name: install brew if not installed
+    block:
+      - name: download installation script
+        shell: 
+      - name: install brew via ruby
+    when:  brew_installed is failed

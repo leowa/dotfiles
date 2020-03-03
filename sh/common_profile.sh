@@ -24,7 +24,9 @@ if [[ $SHELL =~ "bash" ]]; then
 	shopt -s histappend
 fi
 
-[[ -d ~/.profile.d ]] && source ~/.profile.d/*.sh
+[[ -d ~/.profile.d ]] && {
+	 for f in ~/.profile.d/*.sh; do source $f; done
+}
 
 #### Locale relaed settings ####
 # Set  LC and LANG for tmux to accept utf-8
@@ -52,7 +54,7 @@ if test -d /Library/TeX/textin; then
 	more_path=$more_path:/Library/TeX/textbin/
 fi
 
-export KUBECONFIG="/Users/andyz/.kube/config"
+export KUBECONFIG="$HOME/.kube/config"
 export PROMPT_COMMAND='history -a'
 export PATH=$PATH:$more_path
 export PYTHONBREAKPOINT=ipdb.set_trace
