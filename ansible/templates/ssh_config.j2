@@ -1,0 +1,8 @@
+
+
+Host {{ remote_dev_box | default('andyub') }}
+    User {{ ansible_user_id }}
+
+
+Host *
+    User root

@@ -37,3 +37,10 @@
         shell: 
       - name: install brew via ruby
     when:  brew_installed is failed
+
+  - name: configure ~/.ssh/config
+    template:
+      src: templates/ssh_config.j2
+      dest: "{{ ansible_user_dir }}/.ssh/config"
+      mode: 0640
+    tags: ['local']
