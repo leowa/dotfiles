@@ -44,7 +44,7 @@
       scope: global
       value: "{{ item.value }}"
     with_items:
-      - { name: "credential.helper",  value: "osxkeychaincache"}
+      - { name: "credential.helper",  value: "osxkeychain"}
       - { name: "core.editor", value: "/usr/local/bin/vim"}
       - { name: "user.name", value: "Andy Zhang" }
       - { name: "user.email", value: "zch.ustc@gmail.com" }
