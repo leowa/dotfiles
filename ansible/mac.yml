@@ -80,3 +80,13 @@
       dest: "{{ ansible_user_dir }}/.ssh/config"
       mode: 0640
     tags: ['local']
+
+  - name: install python packages
+    pip:
+      executable: /usr/local/bin/pip3
+      name:
+        - docker-compose
+        - ipython
+        - ansible
+        - flake8
+        - pytest
