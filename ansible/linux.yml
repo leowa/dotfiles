@@ -15,6 +15,7 @@
         - bash-completion
         - tree
         - jq
+        - golang
         - docker.io
         - silversearcher-ag
         - python3-pip

@@ -18,6 +18,7 @@
         - autossh
         - kubernetes-cli
         - helm
+        - golang
         - the_silver_searcher
       state: present
     tags:
