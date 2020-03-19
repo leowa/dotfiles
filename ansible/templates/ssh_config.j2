@@ -1,4 +1,6 @@
-
+TCPKeepAlive no
+ServerAliveInterval 60
+ServerAliveCountMax 10
 
 Host {{ remote_dev_box | default('andyub') }}
     User {{ ansible_user_id }}
