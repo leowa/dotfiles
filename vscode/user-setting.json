@@ -1,12 +1,42 @@
 {
     "editor.fontSize": 15,
+    "editor.minimap.enabled": false,
+    "editor.folding": false,
+    "editor.suggestSelection": "first",
+    "editor.renderIndentGuides": false,
+    "editor.formatOnSaveTimeout": 10000,
+    "editor.formatOnSave": false,
+    "breadcrumbs.enabled": false,
     "vim.useCtrlKeys": true,
+    "terminal.integrated.rendererType": "dom",
     "workbench.editor.enablePreview": false,
     "workbench.startupEditor": "none",
+    "workbench.activityBar.visible": false,
+    "workbench.statusBar.visible": true,
+    "workbench.editor.showTabs": false,
+    "workbench.colorTheme": "Base16 Dark Monokai",
+    "workbench.colorCustomizations": {
+        "statusBar.background" : "#1A1A1A",
+        "statusBar.noFolderBackground" : "#212121",
+        "statusBar.debuggingBackground": "#263238"
+    },
     "window.nativeTabs": true,
+    "window.zoomLevel": 0,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "extensions.ignoreRecommendations": false,
+    "files.insertFinalNewline": true,
+    "files.autoSave": "afterDelay",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "git.countBadge": "off",
+    "html.format.enable": false,
+    "go.useLanguageServer": true,
+    "go.formatTool": "goimports",
     "go.lintTool": "golangci-lint",
     "go.lintFlags": [
         "--fast"
@@ -14,13 +44,6 @@
     "go.testFlags": [
         "-v"
     ],
-    "java.home": "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home",
-    "breadcrumbs.enabled": false,
-    "files.autoSave": "afterDelay",
-    "python.formatting.provider": "autopep8",
-    "editor.formatOnSaveTimeout": 10000,
-    "editor.formatOnSave": false,
-    "files.insertFinalNewline": true,
     "[go]": {
         "editor.insertSpaces": true,
         "editor.formatOnSave": true
@@ -32,22 +55,14 @@
         "editor.formatOnSave": true
     },
     "python.jediEnabled": true,
+    "python.formatting.provider": "autopep8",
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
-    // "google-java-format.executable": "/absolute/path/to/google-java-format",
+    "java.home": "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home",
     "java.format.enabled": true,
+    "java.errors.incompleteClasspath.severity": "ignore",
     "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
     "java.format.settings.profile": "GoogleStyle",
-    "editor.suggestSelection": "first",
-    "editor.renderIndentGuides": false,
-    "workbench.colorTheme": "Base16 Dark Monokai",
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
-    },
-    "terminal.integrated.rendererType": "dom",
     "latex-workshop.latex.build.forceRecipeUsage": true,
     "latex-workshop.latex.tools": [
         {
@@ -70,22 +85,6 @@
             ]
         }
     ],
-    "latex-workshop.latex.autoBuild.run": "onFileChange",
-    "git.countBadge": "off",
-    "workbench.activityBar.visible": false,
-    "workbench.statusBar.visible": true,
-    "workbench.colorCustomizations": {
-        "statusBar.background" : "#1A1A1A",
-        "statusBar.noFolderBackground" : "#212121",
-        "statusBar.debuggingBackground": "#263238"
-    },
-    "editor.minimap.enabled": false,
     "latex-workshop.message.update.show": false,
-    "go.useLanguageServer": true,
-    "java.errors.incompleteClasspath.severity": "ignore",
-    "window.zoomLevel": 0,
-    "editor.folding": false,
-    "go.formatTool": "goimports",
-    "workbench.editor.showTabs": false,
-    "html.format.enable": false
+    "latex-workshop.latex.autoBuild.run": "onFileChange"
 }
