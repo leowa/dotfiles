@@ -92,4 +92,10 @@
         - ipython
         - ansible
         - flake8
+        - jq
+        - yq
         - pytest
+        - pdfkit
+        - pre-commit
+        - black
+    tags: ['more']
