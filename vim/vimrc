@@ -16,6 +16,7 @@ Bundle 'Shougo/vimproc'
 Bundle 'Shougo/vimshell.vim'
 Bundle 'fatih/vim-go'
 Bundle 'nvie/vim-flake8'
+Bundle 'hashivim/vim-hashicorp-tools'
 " Bundle 'suan/vim-instant-markdown'
 " tagbar
 " Plugin 'majutsushi/tagbar'
@@ -139,6 +140,9 @@ autocmd BufWritePost *.py call Flake8()
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 "python highlighting extras
 let python_highlight_all = 1
+
+" setting for more syntax
+autocmd BufReadPost *.hcl set syntax=terraform
 
 "PHP highlighting extras
 let php_sql_query = 1
