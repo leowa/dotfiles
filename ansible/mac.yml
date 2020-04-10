@@ -3,99 +3,100 @@
   any_errors_fatal: true
   debugger: on_failed
   tasks:
-  - name: install basic tools via brew
-    package:
-      name: 
-        - vim
-        - tmux
-        - git
-        - telnet
-        - colordiff
-        - bash-completion
-        - tree
-        - jq
-        - zip
-        - autossh
-        - kubernetes-cli
-        - helm
-        - golang
-        - the_silver_searcher
-        - hub
-      state: present
-    tags:
-      - package
+    - name: install basic tools via brew
+      package:
+        name:
+          - vim
+          - tmux
+          - git
+          - telnet
+          - colordiff
+          - bash-completion
+          - tree
+          - jq
+          - zip
+          - autossh
+          - kubernetes-cli
+          - helm
+          - golang
+          - the_silver_searcher
+          - ripgrep
+          - hub
+        state: present
+      tags:
+        - package
 
-  - name: install packages provided via brew cask
-    homebrew_cask:
-      name: "{{ item }}"
-      state: present
-    with_items:
-      - docker
-      - iterm2
-      - visual-studio-code
-      - adoptopenjdk8
-      - mplayer-osx-extended
-      - wireshark
-    tags:
-      - package
+    - name: install packages provided via brew cask
+      homebrew_cask:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - docker
+        - iterm2
+        - visual-studio-code
+        - adoptopenjdk8
+        - mplayer-osx-extended
+        - wireshark
+      tags:
+        - package
 
-  - name:  Configure git
-    delegate_to: localhost
-    git_config: 
-      name: "{{ item.name }}"
-      scope: global
-      value: "{{ item.value }}"
-    with_items:
-      - { name: "credential.helper",  value: "osxkeychain"}
-      - { name: "core.editor", value: "/usr/local/bin/vim"}
-      - { name: "user.name", value: "Andy Zhang" }
-      - { name: "user.email", value: "zch.ustc@gmail.com" }
-      - { name: "core.filemode", value: "true" }
-      - { name: "color.diff", value: "auto" }
-      - { name: "color.status", value: "auto" }
-      - { name: "color.branch", value: "auto" }
-      - { name: "color.interactive", value: "auto" }
-      - { name: "color.ui", value: "true" }
-      - { name: "color.pager", value: "true" }
-      - { name: "push.followTags", value: "true" }
-      - { name: "alias.pr", value: "! git pull -r" }
-      - { name: "alias.aa", value: "! git commit -a --amend" }
-      - { name: "alias.rs", value: "! git reset --soft" }
-      - { name: "alias.cm", value: "commit -m" }
-    tags:
-      - config
+    - name: Configure git
+      delegate_to: localhost
+      git_config:
+        name: "{{ item.name }}"
+        scope: global
+        value: "{{ item.value }}"
+      with_items:
+        - { name: "credential.helper", value: "osxkeychain" }
+        - { name: "core.editor", value: "/usr/local/bin/vim" }
+        - { name: "user.name", value: "Andy Zhang" }
+        - { name: "user.email", value: "zch.ustc@gmail.com" }
+        - { name: "core.filemode", value: "true" }
+        - { name: "color.diff", value: "auto" }
+        - { name: "color.status", value: "auto" }
+        - { name: "color.branch", value: "auto" }
+        - { name: "color.interactive", value: "auto" }
+        - { name: "color.ui", value: "true" }
+        - { name: "color.pager", value: "true" }
+        - { name: "push.followTags", value: "true" }
+        - { name: "alias.pr", value: "! git pull -r" }
+        - { name: "alias.aa", value: "! git commit -a --amend" }
+        - { name: "alias.rs", value: "! git reset --soft" }
+        - { name: "alias.cm", value: "commit -m" }
+      tags:
+        - config
 
-  # - name: check whether brew is installed
-  #   delegate_to: localhost
-  #   shell: which brew
-  #   register: brew_installed
+    # - name: check whether brew is installed
+    #   delegate_to: localhost
+    #   shell: which brew
+    #   register: brew_installed
 
-  # - name: install brew if not installed
-  #   block:
-  #     - name: download installation script
-  #       shell: 
-  #     - name: install brew via ruby
-  #   when:  brew_installed is failed
+    # - name: install brew if not installed
+    #   block:
+    #     - name: download installation script
+    #       shell:
+    #     - name: install brew via ruby
+    #   when:  brew_installed is failed
 
-  - name: configure ~/.ssh/config
-    template:
-      src: templates/ssh_config.j2
-      dest: "{{ ansible_user_dir }}/.ssh/config"
-      mode: 0640
-    tags: ['local']
+    - name: configure ~/.ssh/config
+      template:
+        src: templates/ssh_config.j2
+        dest: "{{ ansible_user_dir }}/.ssh/config"
+        mode: 0640
+      tags: ["local"]
 
-  - name: install python packages
-    pip:
-      executable: /usr/local/bin/pip3
-      name:
-        - docker-compose
-        - ipython
-        - ansible
-        - flake8
-        - jq
-        - yq
-        - pytest
-        - pdfkit
-        - pre-commit
-        - black
-    tags: ['more']
+    - name: install python packages
+      pip:
+        executable: /usr/local/bin/pip3
+        name:
+          - docker-compose
+          - ipython
+          - ansible
+          - flake8
+          - jq
+          - yq
+          - pytest
+          - pdfkit
+          - pre-commit
+          - black
+      tags: ["more"]
