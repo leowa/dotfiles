@@ -22,6 +22,10 @@
           - the_silver_searcher
           - ripgrep
           - hub
+          - mtr
+          - pwgen
+          - awscli
+          - coreutils  # include utils such as `grealpath`
         state: present
       tags:
         - package
@@ -37,6 +41,7 @@
         - adoptopenjdk8
         - mplayer-osx-extended
         - wireshark
+        - sublime-text
       tags:
         - package
 
