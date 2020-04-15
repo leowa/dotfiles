@@ -104,4 +104,5 @@
           - pdfkit
           - pre-commit
           - black
+          - pywebcopy  # great tool to download web pages
       tags: ["more"]
