@@ -58,8 +58,12 @@ export KUBECONFIG="$HOME/.kube/config"
 export PROMPT_COMMAND='history -a'
 export PATH=$PATH:$more_path
 export PYTHONBREAKPOINT=ipdb.set_trace
-if test -z $RBENV_SHELL;then
-  if test `which rbenv`; then
+if type -a rbenv | grep -v "shell" &> /dev/null;then
+  if type -a rbenv &> /dev/null; then
     eval "$(rbenv init -)"
   fi
+fi
+
+if test -d ~/dev/py3;then
+	source ~/dev/py3/bin/activate
 fi
