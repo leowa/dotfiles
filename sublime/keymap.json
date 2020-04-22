@@ -1,7 +1,12 @@
 [
-
     { "keys": ["super+b"], "command": "goto_definition" },
     { "keys": ["super+shift+k"], "command": "jump_back" },
-    { "keys": ["suer+shift+j"], "command": "jump_forward" }
+    { "keys": ["suer+shift+j"], "command": "jump_forward" },
+    {
+        "keys": ["ctrl+shift+t"], "command": "terminus_open",
+        "args": { "cwd": "${file_path:${folder}}" }
+    },
+    { "keys": ["ctrl+backquote"], "command": "toggle_terminus_panel" },
+    { "keys": ["ctrl+shift+backquote"], "command": "show_panel", "args": {"panel": "console", "toggle": true} }
 ]
 
