@@ -107,4 +107,8 @@
         "key": "cmd+4",
         "command": "-workbench.action.focusFourthEditorGroup"
     },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.tasks.reRunTask"
+    }
 ]
