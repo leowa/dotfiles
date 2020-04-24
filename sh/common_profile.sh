@@ -64,6 +64,6 @@ if type -a rbenv | grep -v "shell" &> /dev/null;then
   fi
 fi
 
-if test -d ~/dev/py3;then
-	source ~/dev/py3/bin/activate
+if test -z $VIRTUAL_ENV -a -d ~/dev/py3;then
+  source ~/dev/py3/bin/activate
 fi
