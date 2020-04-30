@@ -1,5 +1,6 @@
 {
-    "editor.fontSize": 15,
+    "editor.fontSize": 18,
+    "terminal.integrated.fontSize": 16,
     "editor.minimap.enabled": false,
     "editor.folding": false,
     "editor.suggestSelection": "first",
