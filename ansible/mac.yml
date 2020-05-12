@@ -25,7 +25,7 @@
           - mtr
           - pwgen
           - awscli
-          - coreutils  # include utils such as `grealpath`
+          - coreutils # include utils such as `grealpath`
         state: present
       tags:
         - package
@@ -67,7 +67,10 @@
         - { name: "alias.pr", value: "! git pull -r" }
         - { name: "alias.aa", value: "! git commit -a --amend" }
         - { name: "alias.rs", value: "! git reset --soft" }
+        - { name: "alias.c", value: "commit" }
         - { name: "alias.cm", value: "commit -m" }
+        - { name: "alias.s", value: "status --no-renames -v" }
+        - { name: "alias.l", value: "log --full-diff" }
       tags:
         - config
 
@@ -104,5 +107,5 @@
           - pdfkit
           - pre-commit
           - black
-          - pywebcopy  # great tool to download web pages
+          - pywebcopy # great tool to download web pages
       tags: ["more"]
