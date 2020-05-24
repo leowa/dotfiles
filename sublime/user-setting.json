@@ -3,7 +3,7 @@
 	"auto_complete_commit_on_tab": true,
 	"auto_complete_with_fields": true,
 	"bold_folder_labels": false,
-	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"color_scheme": "Packages/Material Monokai/MaterialMonokaiDark.tmTheme",
 	"default_encoding": "UTF-8",
 	"detect_indentation": true,
 	"folder_exclude_patterns":
@@ -17,17 +17,17 @@
 	[
 		"subpixel_antialias"
 	],
-	"font_size": 16.0,
+	"font_size": 22.0,
 	"highlight_line": true,
-    "preview_on_click": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
 	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
+	"preview_on_click": true,
 	"tab_size": 4,
-	"theme": "Adaptive.sublime-theme",
+	"theme": "Material-Theme.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": true
