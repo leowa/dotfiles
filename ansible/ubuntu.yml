@@ -1,0 +1,115 @@
+- hosts: localhost
+  gather_facts: false
+  any_errors_fatal: true
+  debugger: on_failed
+  become: true
+  tasks:
+    - name: install basic tools
+      delegate_to: localhost
+      package:
+        name:
+          - vim
+          - tmux
+          - git
+          - telnet
+          - colordiff
+          - bash-completion
+          - tree
+          - jq
+          - golang
+          - docker.io
+          - silversearcher-ag
+          - ripgrep
+          - python3-pip
+        state: present
+      tags:
+        - sudo
+
+    - name: use python3 as default python
+      delegate_to: localhost
+      file:
+        src: /usr/bin/python3
+        dest: /usr/local/bin/python
+        state: link
+      tags:
+        - sudo
+
+    - name: install stable most recent docker-compose
+      delegate_to: localhost
+      get_url:
+        url: "https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-Linux-x86_64"
+        dest: /usr/local/bin/docker-compose
+        mode: 0777
+        checksum: "{{ docker_compose_checksum }}"
+      tags:
+        - sudo
+
+    - name: add current user to docker group
+      delegate_to: localhost
+      user:
+        name: azhang
+        groups: docker
+        append: yes
+
+    - name: Configure git
+      delegate_to: localhost
+      git_config:
+        name: "{{ item.name }}"
+        scope: global
+        value: "{{ item.value }}"
+      with_items:
+        - { name: "credential.helper", value: "cache --timeout=3600" }
+        - { name: "credential.helper", value: "cache --timeout=3600" }
+        - { name: "core.editor", value: "/usr/bin/vim" }
+        - { name: "user.name", value: "Andy Zhang" }
+        - { name: "user.email", value: "azhang@wish.com" }
+        - { name: "core.filemode", value: "true" }
+        - { name: "color.diff", value: "auto" }
+        - { name: "color.status", value: "auto" }
+        - { name: "color.branch", value: "auto" }
+        - { name: "color.interactive", value: "auto" }
+        - { name: "color.ui", value: "true" }
+        - { name: "color.pager", value: "true" }
+        - { name: "push.followTags", value: "true" }
+        - { name: "alias.pr", value: "! git pull -r" }
+        - { name: "alias.aa", value: "! git commit -a --amend" }
+        - { name: "alias.rs", value: "! git reset --soft" }
+        - { name: "alias.c", value: "commit" }
+        - { name: "alias.cm", value: "commit -m" }
+        - { name: "alias.s", value: "status --no-renames -v" }
+        - { name: "alias.l", value: "log --full-diff" }
+
+    - name: clone vim vundle
+      git:
+        repo: https://github.com/gmarik/vundle.git
+        dest: ~/.vim/bundle/vundle
+        depth: 1
+      register: vundle_install
+
+    - name: install vim plugins
+      shell: vim +BundleInstall +qall
+      when: vundle_install is changed
+
+    - name: configure .vimrc
+      copy:
+        src: files/vimrc
+        dest: "{{ ansible_user_dir }}/.vimrc"
+        mode: 0666
+
+    - name: configure .tmux.conf
+      copy:
+        src: files/tmux-linux.conf
+        dest: "{{ ansible_user_dir }}/.tmux.conf"
+        mode: 0666
+
+    - name: configure some alias
+      copy:
+        src: files/aliases-linux
+        dest: "{{ ansible_user_dir }}/.bash_aliases"
+        mode: 0666
+
+    - name: install python packages
+      pip:
+        executable: /usr/bin/pip3
+        name:
+          - docker-compose

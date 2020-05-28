@@ -1,10 +1,11 @@
-- hosts: linux
+- hosts: localhost
   gather_facts: false
   any_errors_fatal: true
   debugger: on_failed
   become: true
   tasks:
     - name: install basic tools
+      delegate_to: localhost
       package:
         name:
           - vim
@@ -17,7 +18,6 @@
           - jq
           - golang
           - docker.io
-          - silversearcher-ag
           - ripgrep
           - python3-pip
         state: present
@@ -25,6 +25,7 @@
         - sudo
 
     - name: use python3 as default python
+      delegate_to: localhost
       file:
         src: /usr/bin/python3
         dest: /usr/local/bin/python
@@ -33,6 +34,7 @@
         - sudo
 
     - name: install stable most recent docker-compose
+      delegate_to: localhost
       get_url:
         url: "https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-Linux-x86_64"
         dest: /usr/local/bin/docker-compose
@@ -42,17 +44,14 @@
         - sudo
 
     - name: add current user to docker group
+      delegate_to: localhost
       user:
         name: azhang
         groups: docker
         append: yes
 
-- hosts: dev
-  gather_facts: false
-  any_errors_fatal: true
-  debugger: on_failed
-  tasks:
     - name: Configure git
+      delegate_to: localhost
       git_config:
         name: "{{ item.name }}"
         scope: global
