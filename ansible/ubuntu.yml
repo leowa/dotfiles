@@ -76,6 +76,7 @@
         - { name: "alias.rs", value: "! git reset --soft" }
         - { name: "alias.c", value: "commit" }
         - { name: "alias.cm", value: "commit -m" }
+        - { name: "alias.d", value: "diff" }
         - { name: "alias.s", value: "status --no-renames -v" }
         - { name: "alias.l", value: "log --full-diff" }
 
