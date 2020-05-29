@@ -1,7 +1,7 @@
 # alias for some basic tools
-alias ls="ls -G"
-alias ll="ls -lh"
-alias la="ls -lhAG"
+alias ls="ls --color=auto"
+alias ll="ls --color=auto -lh"
+alias la="ls --color=auto -lhAG"
 alias cls="clear"
 alias watch="watch "
 alias grep='grep --color=auto'
