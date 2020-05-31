@@ -1,0 +1,114 @@
+[
+    {
+        "key": "cmd+shift+k",
+        "command": "workbench.action.navigateBack"
+    },
+    {
+        "key": "cmd+shift+j",
+        "command": "workbench.action.navigateForward"
+    },
+    {
+        "key": "alt+cmd+b",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "cmd+b",
+        "command": "editor.action.goToDeclaration",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+f",
+        "command": "cursorRight",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+enter",
+        "command": "-python.datascience.execSelectionInteractive",
+        "when": "editorFocus && python.datascience.featureenabled && python.datascience.ownsSelection && !findInputFocussed && !replaceInputFocussed && editorLangId == 'python'"
+    },
+    {
+        "key": "shift+enter",
+        "command": "-python.execSelectionInTerminal",
+        "when": "editorFocus && !findInputFocussed && !python.datascience.ownsSelection && !replaceInputFocussed && editorLangId == 'python'"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-python.datascience.runcurrentcell",
+        "when": "editorFocus && python.datascience.featureenabled && python.datascience.hascodecells && !editorHasSelection"
+    },
+    {
+        "key": "shift+enter",
+        "command": "-python.datascience.runcurrentcelladvance",
+        "when": "editorFocus && python.datascience.featureenabled && python.datascience.hascodecells && !editorHasSelection"
+    },
+    {
+        "key": "shift+cmd+b",
+        "command": "-editor.debug.action.toggleBreakpoint",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+cmd+j",
+        "command": "-workbench.action.search.toggleQueryDetails",
+        "when": "searchViewletVisible"
+    },
+    {
+        "key": "cmd+[",
+        "command": "-workbench.action.navigateBack"
+    },
+    {
+        "key": "cmd+]",
+        "command": "-workbench.action.navigateForward"
+    },
+    {
+        "key": "cmd+]",
+        "command": "-editor.action.indentLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+]",
+        "command": "editor.action.indentLines"
+    },
+    {
+        "key": "cmd+p",
+        "command": "-editor.action.triggerParameterHints",
+        "when": "editorHasSignatureHelpProvider && editorTextFocus"
+    },
+    {
+        "key": "cmd+p",
+        "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "key": "shift+cmd+o",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "alt+f12",
+        "command": "-workbench.action.terminal.focus",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "-workbench.action.selectTheme"
+    },
+    {
+        "key": "shift+escape",
+        "command": "-workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "cmd+4",
+        "command": "workbench.view.extensions"
+    },
+    {
+        "key": "shift+cmd+x",
+        "command": "-workbench.view.extensions"
+    },
+    {
+        "key": "cmd+4",
+        "command": "-workbench.action.focusFourthEditorGroup"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.tasks.reRunTask"
+    }
+]

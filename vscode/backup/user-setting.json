@@ -1,0 +1,49 @@
+{
+    "guides.enabled": false,
+    "window.zoomLevel": 0.618,
+    "editor.fontSize": 20,
+    "terminal.integrated.fontSize": 18,
+    "vim.useCtrlKeys": true,
+    "workbench.startupEditor": "none",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.showTabs": true,
+    "[sls]": {
+        "editor.tabSize": 2
+    },
+    "window.nativeTabs": true,
+    "python.jediEnabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--ignore=E24,E203,E127,E128,E501,W503,W504",
+        "--verbose"
+    ],
+    "python.linting.pylintEnabled": false,
+    "workbench.colorTheme": "Base16 Dark Monokai",
+    "workbench.activityBar.visible": false,
+    "workbench.statusBar.visible": true,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#1A1A1A",
+        "statusBar.noFolderBackground": "#212121",
+        "statusBar.debuggingBackground": "#263238"
+    },
+    "terraform.languageServer": {
+        "enabled": true,
+        "args": []
+    },
+    "terraform.indexing": {
+        "enabled": false,
+        "liveIndexing": false
+    },
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.minimap.enabled": false,
+    "go.useLanguageServer": true,
+    "gitlens.currentLine.enabled": false,
+    "python.pythonPath": "${env:HOME}/dev/py3/bin/python",
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "black",
+    "diffEditor.renderSideBySide": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "editor.tabSize": 2
+}
