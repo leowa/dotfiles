@@ -68,6 +68,7 @@
         - { name: "alias.aa", value: "! git commit -a --amend" }
         - { name: "alias.rs", value: "! git reset --soft" }
         - { name: "alias.c", value: "commit" }
+        - { name: "alias.p", value: "push" }
         - { name: "alias.cm", value: "commit -m" }
         - { name: "alias.cam", value: "commit -am" }
         - { name: "alias.d", value: "diff" }
