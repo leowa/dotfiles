@@ -17,6 +17,7 @@ git_config:
   - { name: "push.followTags", value: "true" }
   - { name: "alias.pr", value: "! git pull -r" }
   - { name: "alias.ps", value: "push" }
+  - { name: "alias.pl", value: "pull" }
   - { name: "alias.aa", value: "! git commit -a --amend" }
   - { name: "alias.rs", value: "! git reset --soft" }
   - { name: "alias.c", value: "commit" }
