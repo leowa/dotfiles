@@ -51,33 +51,7 @@
         name: "{{ item.name }}"
         scope: global
         value: "{{ item.value }}"
-      with_items:
-        - { name: "credential.helper", value: "osxkeychain" }
-        - { name: "core.editor", value: "/usr/local/bin/vim" }
-        - { name: "user.name", value: "Andy Zhang" }
-        - { name: "user.email", value: "zch.ustc@gmail.com" }
-        - { name: "core.filemode", value: "true" }
-        - { name: "color.diff", value: "auto" }
-        - { name: "color.status", value: "auto" }
-        - { name: "color.branch", value: "auto" }
-        - { name: "color.interactive", value: "auto" }
-        - { name: "color.ui", value: "true" }
-        - { name: "color.pager", value: "true" }
-        - { name: "push.followTags", value: "true" }
-        - { name: "alias.pr", value: "! git pull -r" }
-        - { name: "alias.aa", value: "! git commit -a --amend" }
-        - { name: "alias.rs", value: "! git reset --soft" }
-        - { name: "alias.c", value: "commit" }
-        - { name: "alias.p", value: "push" }
-        - { name: "alias.cm", value: "commit -m" }
-        - { name: "alias.cam", value: "commit -am" }
-        - { name: "alias.d", value: "diff" }
-        - { name: "alias.s", value: "status --no-renames -v" }
-        - { name: "alias.l", value: "log --full-diff" }
-        - {
-            name: "alias.lg",
-            value: "lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all",
-          }
+      with_items: "{{ git_config | union(mac_additional_git_config)}}"
       tags:
         - config
 

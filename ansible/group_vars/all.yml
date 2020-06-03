@@ -1,2 +1,34 @@
-docker_compose_version : 1.25.4
+docker_compose_version: 1.25.4
 docker_compose_checksum: "sha256:542e93b1d5106d2769b325f60ba9a0ba087bb96e30dc2c1cb026f0cb642e9aed"
+
+git_config:
+  - { name: "credential.helper", value: "cache --timeout=3600" }
+  - { name: "credential.helper", value: "cache --timeout=3600" }
+  - { name: "core.editor", value: "/usr/bin/vim" }
+  - { name: "user.name", value: "Andy Zhang" }
+  - { name: "user.email", value: "azhang@wish.com" }
+  - { name: "core.filemode", value: "true" }
+  - { name: "color.diff", value: "auto" }
+  - { name: "color.status", value: "auto" }
+  - { name: "color.branch", value: "auto" }
+  - { name: "color.interactive", value: "auto" }
+  - { name: "color.ui", value: "true" }
+  - { name: "color.pager", value: "true" }
+  - { name: "push.followTags", value: "true" }
+  - { name: "alias.pr", value: "! git pull -r" }
+  - { name: "alias.ps", value: "push" }
+  - { name: "alias.aa", value: "! git commit -a --amend" }
+  - { name: "alias.rs", value: "! git reset --soft" }
+  - { name: "alias.c", value: "commit" }
+  - { name: "alias.cm", value: "commit -m" }
+  - { name: "alias.cam", value: "commit -am" }
+  - { name: "alias.d", value: "diff" }
+  - { name: "alias.ss", value: "status --no-renames -v" }
+  - { name: "alias.sh", value: "show" }
+  - { name: "alias.l", value: "log --full-diff" }
+  - {
+      name: "alias.lg",
+      value: "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all",
+    }
+mac_additional_git_config:
+  - { name: "credential.helper", value: "osxkeychain" }
