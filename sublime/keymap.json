@@ -6,7 +6,11 @@
         "keys": ["ctrl+shift+t"], "command": "terminus_open",
         "args": { "cwd": "${file_path:${folder}}" }
     },
-    { "keys": ["ctrl+backquote"], "command": "toggle_terminus_panel" },
-    { "keys": ["ctrl+shift+backquote"], "command": "show_panel", "args": {"panel": "console", "toggle": true} }
+    { "keys": ["super+g"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
+    {
+        "keys": ["enter"], "command": "commit_completion", "context": [
+            { "key": "auto_complete_visible" }
+        ]
+    }
 ]
 
