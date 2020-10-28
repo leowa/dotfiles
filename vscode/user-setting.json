@@ -29,6 +29,7 @@
     "extensions.ignoreRecommendations": false,
     "files.insertFinalNewline": true,
     "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 5000,
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,

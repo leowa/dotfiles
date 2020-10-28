@@ -54,6 +54,11 @@ if test -d /Library/TeX/textin; then
 	more_path=$more_path:/Library/TeX/textbin/
 fi
 
+# py3 venv
+if test -d $HOME/dev/py3/bin; then
+	more_path=$more_path:$HOME/dev/py3/bin
+fi
+
 export KUBECONFIG="$HOME/.kube/config"
 export PROMPT_COMMAND='history -a'
 export PATH=$PATH:$more_path

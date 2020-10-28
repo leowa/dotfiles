@@ -62,3 +62,7 @@ SPACESHIP_DIR_SUFFIX=']'
 PACESHIP_EXIT_CODE_SHOW=true
 SPACESHIP_TIME_SHOW=true
 
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/azhang/.sdkman"
+[[ -s "/Users/azhang/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/azhang/.sdkman/bin/sdkman-init.sh"

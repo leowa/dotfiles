@@ -26,6 +26,7 @@
           - pwgen
           - awscli
           - coreutils # include utils such as `grealpath`
+          - ncdu # show disk usage
         state: present
       tags:
         - package
