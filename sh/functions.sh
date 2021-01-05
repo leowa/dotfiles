@@ -149,3 +149,8 @@ TOKEN=$(kubectl -n kube-system get secrets -o jsonpath="{.items[?(@.metadata.ann
 alias kapi="curl --header \"Authorization: Bearer $TOKEN\" --insecure"
 }
 
+
+# list ec2 instances filter by its name
+function ec2() {
+ aws ec2 describe-instances --output table --filters "Name=tag:Name,Values=*$1*"  --query 'Reservations[*].Instances[*].[Tags[?Key==`Name`].Value|[0],PrivateIpAddress, InstanceType]'
+}

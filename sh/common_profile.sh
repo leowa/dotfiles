@@ -59,6 +59,11 @@ if test -d $HOME/dev/py3/bin; then
 	more_path=$more_path:$HOME/dev/py3/bin
 fi
 
+# pipenv
+if type -a pipenv &> /dev/null; then
+	eval "$(pipenv --completion)"
+fi
+
 export KUBECONFIG="$HOME/.kube/config"
 export PROMPT_COMMAND='history -a'
 export PATH=$PATH:$more_path
