@@ -99,7 +99,7 @@ function git_p()
 
 function git_trim_m()
 {
-	git status -s | sed -n 's/^[ ]M[ ]// p' | grep -v '\(dll\|exe\|pdb\)$' | xargs -I {} sed -E -i -e 's/[\t ]+$//' {}
+	git status -s | sed -n 's/^[ ]M[ ]// p' | grep -v '\(dll\|exe\|pdb\)$' | xargs -I {} sed -E -i -e '' 's/[\t ]+$//' {}
 }
 
 function git_trim()

@@ -13,6 +13,8 @@
         "keys": ["enter"], "command": "commit_completion", "context": [
             { "key": "auto_complete_visible" }
         ]
-    }
+    },
+    { "keys": ["ctrl+]"], "command": "next_view" },
+    { "keys": ["ctrl+["], "command": "prev_view" }
 ]
 
