@@ -40,7 +40,7 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 more_path=/usr/local/sbin:/usr/local/Cellar/mosquitto/1.5.8/bin/:/usr/local/opt/gnu-getopt/bin
 
 ### programming lanuage settings
-[[ -f /usr/libexec/java_home ]] && export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+# [[ -f /usr/libexec/java_home ]] && export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 # golang setting
 if test -d /opt/gopath/; then

@@ -168,5 +168,5 @@ vim +BundleInstall +qall
     cd -
 }
 # Set up flake8 default conf file
-[ -d ~/.config ] || mkdir ~/.config
-cp -f "$__dir/flake8" ~/.config/flake8
+#[ -d ~/.config ] || mkdir ~/.config
+#cp -f "$__dir/flake8" ~/.config/flake8

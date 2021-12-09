@@ -61,3 +61,9 @@ ln -sf $PWD/sh/common_profile.sh  ~/.sh_profile
 ln -sf $PWD/sh/functions.sh ~/.profile.d/function.sh
 ```
 
+## (Mac only) Install [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
+After installing, make sure to enable it both on `general` and `privacy` tab
+Add mapping from `caps_lock` to `f10`, alsl switch `command` and `option` key for USB keyboard by adding mapping for that device
+
+## Configure vim
+

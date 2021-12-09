@@ -28,6 +28,10 @@
           - coreutils # include utils such as `grealpath`
           - ncdu # show disk usage
           - gh # github cli
+          - java
+          - terraform
+          - terragrunt
+          - packer
         state: present
       tags:
         - package
