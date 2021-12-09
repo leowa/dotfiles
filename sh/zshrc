@@ -22,7 +22,7 @@ source ~/dev/bb/dotfiles/sh/antigen.zsh
 #antigen bundle nvm
 antigen bundle history
 
-antigen bundle python
+# antigen bundle python
 antigen bundle tmux
 #antigen bundle osx
 #antigen bundle vi-mode
@@ -64,8 +64,8 @@ SPACESHIP_TIME_SHOW=true
 
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/azhang/.sdkman"
-[[ -s "/Users/azhang/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/azhang/.sdkman/bin/sdkman-init.sh"
+# export SDKMAN_DIR="/Users/azhang/.sdkman"
+# [[ -s "/Users/azhang/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/azhang/.sdkman/bin/sdkman-init.sh"
 
 # Created by mirror-config-china
 export IOJS_ORG_MIRROR=https://npm.taobao.org/mirrors/iojs
@@ -78,3 +78,5 @@ export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
 export NVMW_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
 export NVMW_NPM_MIRROR=https://npm.taobao.org/mirrors/npm
 # End of mirror-config-china
+
+setopt histignorealldups

@@ -1,7 +1,7 @@
 - hosts: localhost
-  gather_facts: false
+  gather_facts: ture
   any_errors_fatal: true
-  debugger: on_failed
+  # debugger: on_failed
   tasks:
     - name: install basic tools via brew
       package:
@@ -69,6 +69,12 @@
     #     - name: install brew via ruby
     #   when:  brew_installed is failed
 
+    - name: ensure ~/.ssh directory
+      file:
+        path: ~/.ssh
+        state: directory
+      tags: ["local"]
+
     - name: configure ~/.ssh/config
       template:
         src: templates/ssh_config.j2
@@ -78,7 +84,7 @@
 
     - name: install python packages
       pip:
-        executable: /usr/local/bin/pip3
+        executable: "{{ ansible_user_dir}}/dev/py3/bin/pip3"
         name:
           - docker-compose
           - ipython

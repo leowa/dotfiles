@@ -60,9 +60,9 @@ if test -d $HOME/dev/py3/bin; then
 fi
 
 # pipenv
-if type -a pipenv &> /dev/null; then
-	eval "$(pipenv --completion)"
-fi
+# if type -a pipenv &> /dev/null; then
+# 	eval "$(pipenv --completion)"
+# fi
 
 export KUBECONFIG="$HOME/.kube/config"
 export PROMPT_COMMAND='history -a'
