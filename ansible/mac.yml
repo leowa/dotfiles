@@ -47,6 +47,7 @@
         - adoptopenjdk8
         - mplayer-osx-extended
         - wireshark
+        - adobe-acrobat-reader
         - sublime-text
       tags:
         - package

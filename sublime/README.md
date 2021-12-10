@@ -7,7 +7,7 @@
 
 - [Edit Command Palette](https://github.com/twolfson/sublime-edit-command-palette): to manage sublime commands
 
-## Listes packages
+## List packages
 
 > Preferences -> Package Settings -> Package Control -> Settings-User
 
@@ -44,7 +44,7 @@
 
 ## Configure sidebar for installed theme
 
-Just put a named theme file such as  `Material-Theme.sublime-theme` under `~/Library/Application Support/Sublime Text 3/Packages/User` with input:
+Just put a named theme file such as  `Material-Theme.sublime-theme` under `~/Library/Application Support/Sublime Text/Packages/User` with input:
 
 ```json
 [

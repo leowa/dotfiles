@@ -1,0 +1,17 @@
+AndrsDC.base16-themes
+dbaeumer.vscode-eslint
+dragos.scala-lsp
+James-Yu.latex-workshop
+k--kato.intellij-idea-keybindings
+lextudio.restructuredtext
+ms-python.python
+ms-vscode.cpptools
+ms-vscode.Go
+msjsdiag.debugger-for-chrome
+pgourlain.erlang
+Pivotal.vscode-spring-boot
+redhat.vscode-xml
+redhat.vscode-yaml
+searKing.preview-vscode
+VisualStudioExptTeam.vscodeintellicode
+vscodevim.vim

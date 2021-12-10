@@ -23,8 +23,8 @@
     },
     {
         "key": "shift+enter",
-        "command": "-python.datascience.execSelectionInteractive",
-        "when": "editorFocus && python.datascience.featureenabled && python.datascience.ownsSelection && !findInputFocussed && !replaceInputFocussed && editorLangId == 'python'"
+        "command": "-jupyter.execSelectionInteractive",
+        "when": "editorFocus && jupyter.featureenabled && jupyter.ownsSelection && !findInputFocussed && !replaceInputFocussed && editorLangId == 'python'"
     },
     {
         "key": "shift+enter",
@@ -33,13 +33,13 @@
     },
     {
         "key": "ctrl+enter",
-        "command": "-python.datascience.runcurrentcell",
-        "when": "editorFocus && python.datascience.featureenabled && python.datascience.hascodecells && !editorHasSelection"
+        "command": "-jupyter.runcurrentcell",
+        "when": "editorFocus && jupyter.featureenabled && jupyter.hascodecells && !editorHasSelection"
     },
     {
         "key": "shift+enter",
-        "command": "-python.datascience.runcurrentcelladvance",
-        "when": "editorFocus && python.datascience.featureenabled && python.datascience.hascodecells && !editorHasSelection"
+        "command": "-jupyter.runcurrentcelladvance",
+        "when": "editorFocus && jupyter.featureenabled && jupyter.hascodecells && !editorHasSelection"
     },
     {
         "key": "shift+cmd+b",

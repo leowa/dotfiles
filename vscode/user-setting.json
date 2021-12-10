@@ -1,5 +1,5 @@
 {
-    "editor.fontSize": 18,
+    "editor.fontSize": 20,
     "terminal.integrated.fontSize": 16,
     "editor.minimap.enabled": false,
     "editor.folding": false,
@@ -11,6 +11,7 @@
     "vim.useCtrlKeys": true,
     "terminal.integrated.rendererType": "dom",
     "terminal.integrated.fontSize": 15,
+    "terminal.integrated.fontFamily": "Noto Mono for Powerline",
     "workbench.editor.enablePreview": false,
     "workbench.startupEditor": "none",
     "workbench.activityBar.visible": false,
@@ -57,7 +58,6 @@
     "[python]": {
         "editor.formatOnSave": true
     },
-    "python.jediEnabled": true,
     "python.formatting.provider": "autopep8",
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
@@ -89,5 +89,12 @@
         }
     ],
     "latex-workshop.message.update.show": false,
-    "latex-workshop.latex.autoBuild.run": "onFileChange"
+    "latex-workshop.latex.autoBuild.run": "onFileChange",
+    "security.workspace.trust.untrustedFiles": "open",
+    "python.languageServer": "Jedi",
+    "redhat.telemetry.enabled": true,
+    "files.associations": {
+        "*.sls": "yaml",
+        "*.jina": "yaml"
+    }
 }
