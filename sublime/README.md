@@ -20,6 +20,7 @@
 	"installed_packages":
 	[
 		"A File Icon",
+		"auto-save",
 		"Anaconda",
 		"GoGuru",
 		"GotoWindow",

@@ -80,3 +80,4 @@ export NVMW_NPM_MIRROR=https://npm.taobao.org/mirrors/npm
 # End of mirror-config-china
 
 setopt histignorealldups
+export PATH="/opt/homebrew/opt/mongodb-community@4.2/bin:$PATH"

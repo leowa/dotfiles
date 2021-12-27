@@ -52,6 +52,7 @@ For mac book: run command: `ansible-playbook`
 ln -sf $(PWD)/vscode/user-setting.json "$HOME/Library/Application Support/Code/User/settings.json"
 ln -sf $(PWD)/vscode/user-keybindings.json "$HOME/Library/Application Support/Code/User/keybindings.json"
 ln -sf $(PWD)/vscode/flake8.ini "$HOME/.config/flake8"
+ln -sf $(PWD)/vscode/pyproject.toml "$HOME/.config/pyproject.toml"
 # ln -sf $(PWD)/vscode/golangci.yml "$(GOPATH)/.golangci.yml"
 ln -sf $(PWD)/vscode/pycodestyle.ini "$HOME/.config/pycodestyle"
 ln -sf $(PWD)/ansible/ansible.cfg ~/.ansible.cfg
@@ -110,6 +111,12 @@ Then fix iterm2 following `Profiles>Andy>Text>Font` to choose a font such as `No
 for x in `cat vscode/ext.txt`; do code --install-extension $x; done
 ```
 
+- Configure `black` for python formatter
+
+```sh
+# reference: https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#configuration-via-a-file
+```
+
 ## Configure sublime text
 
 - Install *Package Control*
@@ -135,3 +142,15 @@ Use [user-setting.json](./sublime/user-setting.json)
 - Change `Page Background` color in `Accessibility` tab to RGB(246,245,216)
 - Enable `single-key accelerators` in `General` tab
 
+## Configure goland
+
+- For python2, you can install `pyenv`, install `v2.7.18` by `pyenv install  2.7.18`, and configure this env with path like `/Users/azhang/.pyenv/versions/2.7.18`.
+
+## Install formulas from other tap
+
+- install mongodb community version
+```sh
+brew tap mongodb/brew
+brew install mongodb-community@4.2
+echo 'export PATH="/opt/homebrew/opt/mongodb-community@4.2/bin:$PATH"' >> ~/.zshrc
+```

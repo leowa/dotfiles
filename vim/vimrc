@@ -27,6 +27,7 @@ nmap <C-k> :TagbarToggle<CR>
 " Plugin 'xolox/vim-easytags'
 Bundle 'xolox/vim-misc'
 Bundle 'alecthomas/gometalinter'
+Plugin 'cespare/vim-toml'
 " also need to install some go packages
 
 Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}

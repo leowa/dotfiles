@@ -1,6 +1,5 @@
 {
-    "editor.fontSize": 20,
-    "terminal.integrated.fontSize": 16,
+    "editor.fontSize": 18,
     "editor.minimap.enabled": false,
     "editor.folding": false,
     "editor.suggestSelection": "first",
@@ -9,8 +8,7 @@
     "editor.formatOnSave": false,
     "breadcrumbs.enabled": false,
     "vim.useCtrlKeys": true,
-    "terminal.integrated.rendererType": "dom",
-    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.fontSize": 18,
     "terminal.integrated.fontFamily": "Noto Mono for Powerline",
     "workbench.editor.enablePreview": false,
     "workbench.startupEditor": "none",
@@ -24,7 +22,6 @@
         "statusBar.debuggingBackground": "#263238"
     },
     "window.nativeTabs": true,
-    "window.zoomLevel": 0,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "extensions.ignoreRecommendations": false,
@@ -58,7 +55,7 @@
     "[python]": {
         "editor.formatOnSave": true
     },
-    "python.formatting.provider": "autopep8",
+    "python.formatting.provider": "black",
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
     "java.home": "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home",
@@ -94,7 +91,12 @@
     "python.languageServer": "Jedi",
     "redhat.telemetry.enabled": true,
     "files.associations": {
-        "*.sls": "yaml",
         "*.jina": "yaml"
-    }
+    },
+    "python.formatting.blackArgs": [
+        "--config ~/.config/pyproject.toml"
+    ],
+    "python.linting.flake8Args": [
+        "--config ~/.config/flake8"
+    ]
 }
