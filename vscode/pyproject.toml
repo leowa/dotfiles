@@ -1,6 +1,6 @@
 [tool.black]
 line-length = 88
-target-version = ['py37']
+target_version = ['py35', 'py36', 'py37', 'py38', 'py39']
 include = '\.pyi?$'
 extend-exclude = '''
 # A regex preceded with ^/ will apply only to files and directories

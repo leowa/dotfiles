@@ -3,9 +3,10 @@
     "editor.minimap.enabled": false,
     "editor.folding": false,
     "editor.suggestSelection": "first",
+    "editor.acceptSuggestionOnCommitCharacter": false,
     "editor.renderIndentGuides": false,
     "editor.formatOnSaveTimeout": 10000,
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": true,
     "breadcrumbs.enabled": false,
     "vim.useCtrlKeys": true,
     "terminal.integrated.fontSize": 18,
@@ -17,8 +18,8 @@
     "workbench.editor.showTabs": false,
     "workbench.colorTheme": "Base16 Dark Monokai",
     "workbench.colorCustomizations": {
-        "statusBar.background" : "#1A1A1A",
-        "statusBar.noFolderBackground" : "#212121",
+        "statusBar.background": "#1A1A1A",
+        "statusBar.noFolderBackground": "#212121",
         "statusBar.debuggingBackground": "#263238"
     },
     "window.nativeTabs": true,
@@ -58,7 +59,6 @@
     "python.formatting.provider": "black",
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
-    "java.home": "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home",
     "java.format.enabled": true,
     "java.errors.incompleteClasspath.severity": "ignore",
     "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
@@ -94,9 +94,9 @@
         "*.jina": "yaml"
     },
     "python.formatting.blackArgs": [
-        "--config ~/.config/pyproject.toml"
+        "--config=${env:HOME}/.config/pyproject.toml"
     ],
     "python.linting.flake8Args": [
-        "--config ~/.config/flake8"
+        "--config=${env:HOME}/.config/flake8"
     ]
 }
