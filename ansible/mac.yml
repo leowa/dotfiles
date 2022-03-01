@@ -17,6 +17,7 @@
           - jq
           - zip
           - autossh
+          - minikube
           - kubernetes-cli
           - kubectx
           - helm

@@ -88,7 +88,7 @@
     "latex-workshop.message.update.show": false,
     "latex-workshop.latex.autoBuild.run": "onFileChange",
     "security.workspace.trust.untrustedFiles": "open",
-    "python.languageServer": "Jedi",
+    "python.languageServer": "Pylance",
     "redhat.telemetry.enabled": true,
     "files.associations": {
         "*.jina": "yaml"
@@ -98,5 +98,6 @@
     ],
     "python.linting.flake8Args": [
         "--config=${env:HOME}/.config/flake8"
-    ]
+    ],
+    "window.zoomLevel": 1
 }

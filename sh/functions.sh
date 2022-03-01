@@ -159,6 +159,10 @@ function qec2() {
  aws ec2 describe-instances --profile QA --output table --filters "Name=tag:Name,Values=*$1*"  --query 'Reservations[*].Instances[*].[Tags[?Key==`Name`].Value|[0],PrivateIpAddress, InstanceType]|sort_by([],&[0])'
 }
 
+function zec2() {
+ aws ec2 describe-instances --profile zhy --output table --filters "Name=tag:Name,Values=*$1*"  --query 'Reservations[*].Instances[*].[Tags[?Key==`Name`].Value|[0],PrivateIpAddress, InstanceType]|sort_by([],&[0])'
+}
+
 # describe AWS ENI provided its private IP address
 function eni() {
 aws ec2 describe-network-interfaces --query 'NetworkInterfaces[*].[join(`: `,[PrivateIpAddress,(TagSet[?Key==`Name`].Value[0] || Description)])]|[]|[]' --filters "Name=addresses.private-ip-address,Values=*$1*"
