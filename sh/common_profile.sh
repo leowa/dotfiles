@@ -55,9 +55,9 @@ if test -d /Library/TeX/textin; then
 fi
 
 # py3 venv
-if test -d $HOME/dev/py3/bin; then
-	more_path=$more_path:$HOME/dev/py3/bin
-fi
+# if test -d $HOME/dev/py3/bin; then
+#	more_path=$more_path:$HOME/dev/py3/bin
+# fi
 
 # pipenv
 # if type -a pipenv &> /dev/null; then
@@ -77,6 +77,6 @@ if type -a rbenv | grep -v "shell" &> /dev/null;then
   fi
 fi
 
-if test -z $VIRTUAL_ENV -a -d ~/dev/py3;then
-  source ~/dev/py3/bin/activate
-fi
+# if test -z $VIRTUAL_ENV -a -d ~/dev/py3;then
+#   source ~/dev/py3/bin/activate
+# fi

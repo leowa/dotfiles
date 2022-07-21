@@ -4,10 +4,8 @@
     "editor.folding": false,
     "editor.suggestSelection": "first",
     "editor.acceptSuggestionOnCommitCharacter": false,
-    "editor.renderIndentGuides": false,
     "editor.formatOnSaveTimeout": 10000,
     "editor.formatOnSave": true,
-    "breadcrumbs.enabled": false,
     "vim.useCtrlKeys": true,
     "terminal.integrated.fontSize": 18,
     "terminal.integrated.fontFamily": "Noto Mono for Powerline",
@@ -88,7 +86,6 @@
     "latex-workshop.message.update.show": false,
     "latex-workshop.latex.autoBuild.run": "onFileChange",
     "security.workspace.trust.untrustedFiles": "open",
-    "python.languageServer": "Pylance",
     "redhat.telemetry.enabled": true,
     "files.associations": {
         "*.jina": "yaml"
@@ -99,5 +96,16 @@
     "python.linting.flake8Args": [
         "--config=${env:HOME}/.config/flake8"
     ],
-    "window.zoomLevel": 1
+    "python.defaultInterpreterPath": "${env:HOME}/dev/py39/bin/python",
+    "python.languageServer": "Pylance",
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}"
+    ],
+    "editor.guides.indentation": false,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "editor.unicodeHighlight.allowedCharacters": {
+        " ": true,
+        "−": true
+    },
+    "diffEditor.ignoreTrimWhitespace": false
 }
