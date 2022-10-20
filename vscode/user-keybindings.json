@@ -144,4 +144,19 @@
         "command": "extension.vim_escape",
         "when": "editorTextFocus && vim.active && !inDebugRepl"
     },
+    {
+        "key": "escape",
+        "command": "-notebook.cell.quitEdit",
+        "when": "inputFocus && notebookEditorFocused && vim.active && !editorHasSelection && !editorHoverVisible && vim.mode == 'Normal'"
+    },
+    {
+        "key": "k",
+        "command": "-notebook.focusPreviousEditor",
+        "when": "editorTextFocus && inputFocus && notebookEditorFocused && vim.mode == 'Normal' && notebookEditorCursorAtBoundary != 'bottom' && notebookEditorCursorAtBoundary != 'none'"
+    },
+    {
+        "key": "j",
+        "command": "-notebook.focusNextEditor",
+        "when": "editorTextFocus && inputFocus && notebookEditorFocused && vim.mode == 'Normal' && notebookEditorCursorAtBoundary != 'none' && notebookEditorCursorAtBoundary != 'top'"
+    },
 ]

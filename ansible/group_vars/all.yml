@@ -8,6 +8,7 @@ git_config:
   - { name: "user.name", value: "azhang" }
   - { name: "user.email", value: "azhang@wish.com" }
   - { name: "core.filemode", value: "true" }
+  - { name: "core.ignorecase", value: "false" }
   - { name: "color.diff", value: "auto" }
   - { name: "color.status", value: "auto" }
   - { name: "color.branch", value: "auto" }

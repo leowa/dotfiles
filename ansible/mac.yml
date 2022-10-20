@@ -7,6 +7,7 @@
       package:
         name:
           - vim
+          - watch
           - tmux
           - wget
           - git

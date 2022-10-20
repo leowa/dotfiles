@@ -1,6 +1,5 @@
 {
     "editor.fontSize": 18,
-    "editor.minimap.enabled": false,
     "editor.folding": false,
     "editor.suggestSelection": "first",
     "editor.acceptSuggestionOnCommitCharacter": false,
@@ -99,7 +98,8 @@
     "python.defaultInterpreterPath": "${env:HOME}/dev/py39/bin/python",
     "python.languageServer": "Pylance",
     "python.analysis.extraPaths": [
-        "${workspaceFolder}"
+        "${workspaceFolder}",
+        "${workspaceFolder}/fun",
     ],
     "editor.guides.indentation": false,
     "terminal.integrated.enableMultiLinePasteWarning": false,
@@ -107,5 +107,11 @@
         " ": true,
         "−": true
     },
-    "diffEditor.ignoreTrimWhitespace": false
+    "diffEditor.ignoreTrimWhitespace": false,
+    "notebook.lineNumbers": "on",
+    "jupyter.askForKernelRestart": false,
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportMissingImports": "none"
+    },
+    "git.timeline.showAuthor": false,
 }
