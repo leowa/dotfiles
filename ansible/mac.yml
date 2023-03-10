@@ -36,6 +36,7 @@
           - terraform
           - terragrunt
           - packer
+          - libffi  # libffi is a foreign function interface library. It provides a C programming language interface for calling natively compiled functions given information about the target function at run time instead of compile time. 
         state: present
       tags:
         - package

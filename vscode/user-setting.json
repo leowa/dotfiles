@@ -51,7 +51,8 @@
         "editor.formatOnSave": false
     },
     "[python]": {
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true
     },
     "python.formatting.provider": "black",
     "python.linting.flake8Enabled": true,
@@ -114,4 +115,6 @@
         "reportMissingImports": "none"
     },
     "git.timeline.showAuthor": false,
+    "go.toolsManagement.autoUpdate": true,
+    "vsicons.dontShowNewVersionMessage": true,
 }
