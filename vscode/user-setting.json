@@ -3,16 +3,14 @@
     "editor.folding": false,
     "editor.suggestSelection": "first",
     "editor.acceptSuggestionOnCommitCharacter": false,
-    "editor.formatOnSaveTimeout": 10000,
     "editor.formatOnSave": true,
     "vim.useCtrlKeys": true,
     "terminal.integrated.fontSize": 18,
     "terminal.integrated.fontFamily": "Noto Mono for Powerline",
-    "workbench.editor.enablePreview": false,
     "workbench.startupEditor": "none",
-    "workbench.activityBar.visible": false,
     "workbench.statusBar.visible": true,
-    "workbench.editor.showTabs": false,
+    "workbench.editor.showTabs": "single",
+    "editor.stickyScroll.enabled": false,
     "workbench.colorTheme": "Base16 Dark Monokai",
     "workbench.colorCustomizations": {
         "statusBar.background": "#1A1A1A",
@@ -23,9 +21,10 @@
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "extensions.ignoreRecommendations": false,
-    "files.insertFinalNewline": true,
+    "files.insertFinalNewline": false,
     "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 5000,
+    "files.trimTrailingWhitespace": true,
+    "files.autoSaveDelay": 1000,
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
@@ -52,11 +51,16 @@
     },
     "[python]": {
         "editor.formatOnSave": true,
-        "editor.formatOnType": true
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnType": true,
     },
-    "python.formatting.provider": "black",
-    "python.linting.flake8Enabled": true,
-    "python.linting.pylintEnabled": false,
+    // "black-formatter.args": [
+    //     "--config", "{env:HOME}/.config/pyproject.toml"
+    // ],
+    "flake8.args": [
+        "--max-line-length=125",
+        "--ignore=E402,F841,F401,E302,E305,T201",
+    ],
     "java.format.enabled": true,
     "java.errors.incompleteClasspath.severity": "ignore",
     "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
@@ -83,19 +87,12 @@
             ]
         }
     ],
-    "latex-workshop.message.update.show": false,
     "latex-workshop.latex.autoBuild.run": "onFileChange",
     "security.workspace.trust.untrustedFiles": "open",
     "redhat.telemetry.enabled": true,
     "files.associations": {
         "*.jina": "yaml"
     },
-    "python.formatting.blackArgs": [
-        "--config=${env:HOME}/.config/pyproject.toml"
-    ],
-    "python.linting.flake8Args": [
-        "--config=${env:HOME}/.config/flake8"
-    ],
     "python.defaultInterpreterPath": "${env:HOME}/dev/py39/bin/python",
     "python.languageServer": "Pylance",
     "python.analysis.extraPaths": [
@@ -117,4 +114,14 @@
     "git.timeline.showAuthor": false,
     "go.toolsManagement.autoUpdate": true,
     "vsicons.dontShowNewVersionMessage": true,
+    "diffEditor.codeLens": true,
+    "gitlens.codeLens.enabled": false,
+    "remote.autoForwardPorts": false,
+    "terminal.integrated.detectLocale": "off",
+    "git.openRepositoryInParentFolders": "never",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "workbench.activityBar.location": "hidden",
+    "python.analysis.fixAll": [],
+    "window.commandCenter": false,
+    "editor.minimap.enabled": false,
 }

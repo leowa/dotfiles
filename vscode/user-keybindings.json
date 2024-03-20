@@ -159,4 +159,8 @@
         "command": "-notebook.focusNextEditor",
         "when": "editorTextFocus && inputFocus && notebookEditorFocused && vim.mode == 'Normal' && notebookEditorCursorAtBoundary != 'none' && notebookEditorCursorAtBoundary != 'top'"
     },
+    {
+        "key": "cmd+s w",
+        "command": "workbench.action.switchWindow"
+    },
 ]

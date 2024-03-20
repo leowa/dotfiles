@@ -33,10 +33,12 @@
           - ncdu # show disk usage
           - gh # github cli
           - java
+          - moreutils
           - terraform
           - terragrunt
           - packer
-          - libffi  # libffi is a foreign function interface library. It provides a C programming language interface for calling natively compiled functions given information about the target function at run time instead of compile time. 
+          - libffi  # libffi is a foreign function interface library. It provides a C programming language interface for calling natively compiled functions given information about the target function at run time instead of compile time.
+          - fzf # https://github.com/junegunn/fzf. To install useful key bindings and fuzzy completion: $(brew --prefix)/opt/fzf/install
         state: present
       tags:
         - package

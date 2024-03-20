@@ -1,11 +1,21 @@
+# [tool.black]
+# line-length = 125
+# target_version = ['py39']
+# include = '\.pyi?$'
+# extend-exclude = '''
+# # A regex preceded with ^/ will apply only to files and directories
+# # in the root of the project.
+# ^/foo.py  # exclude a file named foo.py in the root of the project (in addition to the defaults)
+# '''
 [tool.black]
-line-length = 99
-target_version = ['py35', 'py36', 'py37', 'py38', 'py39']
-include = '\.pyi?$'
-extend-exclude = '''
-# A regex preceded with ^/ will apply only to files and directories
-# in the root of the project.
-^/foo.py  # exclude a file named foo.py in the root of the project (in addition to the defaults)
-'''
-[tool.pyright]
-reportMissingImports = false
+line-length = 125
+# this hack is necessary if you are a double-quote hater :D
+skip-string-normalization = true
+
+#[tool.pyright]
+#reportMissingImports = false
+#
+#[tool.flake8]
+#max-line-length = 125
+#ignore = F812,H101,H202,H233,H301,H306,H401,H403,H404,H405,H501,E128,E501,E741,E722,W504,E302,E303,E226,E225,E11,E121,E101,E125,E126,E127,E128,E129,W191,W503,F821,F405,W605,E203
+
