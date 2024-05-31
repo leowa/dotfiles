@@ -163,4 +163,28 @@
         "key": "cmd+s w",
         "command": "workbench.action.switchWindow"
     },
+    {
+        "key": "shift+tab",
+        "command": "-resttext.key.shift.tab",
+        "when": "editorTextFocus && resttext.shift.tab.enabled && !inSnippetMode && !suggestWidgetVisible && editorLangId == 'restructuredtext'"
+    },
+    {
+        "key": "tab",
+        "command": "-resttext.key.tab",
+        "when": "editorTextFocus && resttext.tab.enabled && !inSnippetMode && !inlineSuggestionVisible && !suggestWidgetVisible && editorLangId == 'restructuredtext'"
+    },
+    {
+        "key": "alt+t",
+        "command": "-resttext.table.dataToTable",
+        "when": "editorHasSelection && editorTextFocus && !editorHasMultipleSelections && editorLangId == 'restructuredtext'"
+    },
+    {
+        "key": "cmd+[",
+        "command": "-restructuredtext.editor.listEditing.onOutdentLines",
+        "when": "editorTextFocus && !suggestWidgetVisible && editorLangId == 'restructuredtext'"
+    },
+    {
+        "key": "cmd+[",
+        "command": "editor.action.outdentLines"
+    },
 ]

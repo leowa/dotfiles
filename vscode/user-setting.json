@@ -124,4 +124,5 @@
     "python.analysis.fixAll": [],
     "window.commandCenter": false,
     "editor.minimap.enabled": false,
+    "editor.detectIndentation": false,
 }
