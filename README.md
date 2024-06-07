@@ -18,6 +18,9 @@ configuration files for various tools
 brew install python3 Rust
 pip3 install -U pip
 pip3 install ansible
+
+# after 2024, use brew to install ansible
+brew install ansible
 ```
 
 TIPS: run `brew search <app>` to search formula in `cask`, and then install it like `brew install --cask adobe-acrobat-reader`
@@ -44,7 +47,8 @@ andyub
 Then run command like this to configure remote linux dev box: `ansible-playbook linux.yml -K`.
 If you don't want to input password for second run, just run `ansible-playbook linux.yml -l dev --skip-tags sudo`.
 
-For mac book: run command: `ansible-playbook`
+For mac book: run command: `ansible-playbook --connection=local  mac.yml` under `ansible/` folder
+`--connection=local ` option is to fix error on mac: `ssh: connect to host localhost port 22: Connection refused`
 
 ## Create soft links
 
@@ -71,6 +75,8 @@ ln -sf $PWD/sh/functions.sh ~/.profile.d/function.sh
 
 After installing, make sure to enable it both on `general` and `privacy` tab
 Add mapping from `caps_lock` to `f10`, alsl switch `command` and `option` key for USB keyboard by adding mapping for that device
+
+## Install [MenuMeters](https://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/)
 
 ## Configure vim
 
@@ -126,6 +132,10 @@ Open menu: View > Show Console menu, and then input the following script:
 ```py
 import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())
 ```
+__NOTE__: if that failed due to some dpendency issue such as `openssl` issue, do that manually:
+>> 1. download latest release from `https://github.com/wbond/package_control/releases`
+>> 2. rename it to Package Control.sublime-package
+>> 3. place it to ST's Installed Packages directory (try `~/Library/Application Support/Sublime Text/`)
 
 - Manually install packages by `Package Control` for those listed in [subl readme](./sublime/README.md)
 
@@ -142,7 +152,7 @@ Use [user-setting.json](./sublime/user-setting.json)
 - Change `Page Background` color in `Accessibility` tab to RGB(246,245,216)
 - Enable `single-key accelerators` in `General` tab
 
-## Configure goland
+## Configure python env
 
 - For python2, you can install `pyenv`, install `v2.7.18` by `pyenv install  2.7.18`, and configure this env with path like `/Users/azhang/.pyenv/versions/2.7.18`.
 

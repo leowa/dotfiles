@@ -80,3 +80,5 @@ fi
 # if test -z $VIRTUAL_ENV -a -d ~/dev/py3;then
 #   source ~/dev/py3/bin/activate
 # fi
+
+export AWS_DEFAULT_PROFILE=sso

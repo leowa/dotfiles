@@ -39,6 +39,7 @@
 		"Terminus",
 		"Terrafmt",
 		"Terraform",
+		"PackageSync",
 	]
 }
 ```
@@ -71,3 +72,6 @@ Just put a named theme file such as  `Material-Theme.sublime-theme` under `~/Lib
     "pep8_max_line_length": 88
 }
 ```
+
+## Confiure syntax with file extension
+> `View -> Syntax -> Open all with current extension as ...`

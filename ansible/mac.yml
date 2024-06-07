@@ -1,5 +1,5 @@
 - hosts: localhost
-  gather_facts: ture
+  gather_facts: true
   any_errors_fatal: true
   # debugger: on_failed
   tasks:
@@ -14,6 +14,7 @@
           - telnet
           - colordiff
           - bash-completion
+          - font-hack-nerd-font
           - tree
           - jq
           - zip
@@ -26,6 +27,7 @@
           - the_silver_searcher
           - ripgrep
           - hub
+          - pyenv
           - mtr
           - pwgen
           - awscli
@@ -51,7 +53,6 @@
         - docker
         - iterm2
         - visual-studio-code
-        - adoptopenjdk8
         - mplayer-osx-extended
         - wireshark
         - adobe-acrobat-reader

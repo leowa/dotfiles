@@ -156,7 +156,7 @@ function ec2() {
 }
 
 function qec2() {
- aws ec2 describe-instances --profile QA --output table --filters "Name=tag:Name,Values=*$1*"  --query 'Reservations[*].Instances[*].[Tags[?Key==`Name`].Value|[0],PrivateIpAddress, InstanceType]|sort_by([],&[0])'
+ aws ec2 describe-instances --profile qa --output table --filters "Name=tag:Name,Values=*$1*"  --query 'Reservations[*].Instances[*].[Tags[?Key==`Name`].Value|[0],PrivateIpAddress, InstanceType]|sort_by([],&[0])'
 }
 
 function zec2() {

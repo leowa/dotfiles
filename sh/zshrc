@@ -31,6 +31,7 @@ antigen bundle zsh-users/zsh-completions
 antigen bundle z
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle spaceship-vi-mode
 #antigen bundle mafredri/zsh-async
 # Select theme.
 antigen theme denysdovhan/spaceship-prompt
@@ -41,13 +42,13 @@ SPACESHIP_PROMPT_ORDER=(
   time
   user          # Username section
   host          # Hostname section
-  git           # Git section (git_branch + git_status)
+#  git           # Git section (git_branch + git_status)
 #  golang        # Go section
   venv          # virtualenv section
   exec_time     # Execution time
   dir           # Current directory section
   line_sep      # Line break
-  vi_mode       # Vi-mode indicator
+#  vi_mode       # Vi-mode indicator
   exit_code     # Exit code section
   char          # Prompt character
 )
