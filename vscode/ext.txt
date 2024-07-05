@@ -1,8 +1,10 @@
 AndrsDC.base16-themes
 dbaeumer.vscode-eslint
 dragos.scala-lsp
+eamodio.gitlens
 James-Yu.latex-workshop
 k--kato.intellij-idea-keybindings
+korekontrol.saltstack
 lextudio.restructuredtext
 ms-python.python
 ms-vscode.cpptools
@@ -15,3 +17,4 @@ redhat.vscode-yaml
 searKing.preview-vscode
 VisualStudioExptTeam.vscodeintellicode
 vscodevim.vim
+waderyan.gitblame

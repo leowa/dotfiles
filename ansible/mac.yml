@@ -23,6 +23,7 @@
           - kubernetes-cli
           - kubectx
           - helm
+          - firefox
           - golang
           - the_silver_searcher
           - ripgrep

@@ -123,6 +123,10 @@ for x in `cat vscode/ext.txt`; do code --install-extension $x; done
 # reference: https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#configuration-via-a-file
 ```
 
+- Configure [`Autocomplete and IntelliSense`](https://code.visualstudio.com/docs/python/editing) for python
+
+
+
 ## Configure sublime text
 
 - Install *Package Control*

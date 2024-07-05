@@ -91,13 +91,15 @@
     "security.workspace.trust.untrustedFiles": "open",
     "redhat.telemetry.enabled": true,
     "files.associations": {
-        "*.jina": "yaml"
+        "*.jina": "yaml",
+        "*.sls": "sls"
     },
-    "python.defaultInterpreterPath": "${env:HOME}/dev/py39/bin/python",
+    "python.defaultInterpreterPath": "${env:HOME}/dev/py3/bin/python",
     "python.languageServer": "Pylance",
     "python.analysis.extraPaths": [
         "${workspaceFolder}",
         "${workspaceFolder}/fun",
+        "${env:HOME}/dev/py3/~/dev/py3/lib/python3.12/site-packages",
     ],
     "editor.guides.indentation": false,
     "terminal.integrated.enableMultiLinePasteWarning": false,
@@ -114,7 +116,6 @@
     "git.timeline.showAuthor": false,
     "go.toolsManagement.autoUpdate": true,
     "vsicons.dontShowNewVersionMessage": true,
-    "diffEditor.codeLens": true,
     "gitlens.codeLens.enabled": false,
     "remote.autoForwardPorts": false,
     "terminal.integrated.detectLocale": "off",
@@ -125,4 +126,5 @@
     "window.commandCenter": false,
     "editor.minimap.enabled": false,
     "editor.detectIndentation": false,
+    "diffEditor.codeLens": true,
 }
