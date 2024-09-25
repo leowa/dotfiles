@@ -49,6 +49,9 @@
     "[yaml]": {
         "editor.formatOnSave": false
     },
+    "[sls]": {
+        "editor.tabSize": 2
+    },
     "[python]": {
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "ms-python.black-formatter",
@@ -127,4 +130,5 @@
     "editor.minimap.enabled": false,
     "editor.detectIndentation": false,
     "diffEditor.codeLens": true,
+    "makefile.configureOnOpen": true,
 }

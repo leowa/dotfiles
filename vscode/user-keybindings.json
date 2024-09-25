@@ -1,13 +1,5 @@
 [
     {
-        "key": "cmd+shift+k",
-        "command": "workbench.action.navigateBack"
-    },
-    {
-        "key": "cmd+shift+j",
-        "command": "workbench.action.navigateForward"
-    },
-    {
         "key": "alt+cmd+b",
         "command": "workbench.action.toggleSidebarVisibility"
     },
@@ -50,14 +42,6 @@
         "key": "shift+cmd+j",
         "command": "-workbench.action.search.toggleQueryDetails",
         "when": "searchViewletVisible"
-    },
-    {
-        "key": "cmd+[",
-        "command": "-workbench.action.navigateBack"
-    },
-    {
-        "key": "cmd+]",
-        "command": "-workbench.action.navigateForward"
     },
     {
         "key": "cmd+]",
@@ -186,5 +170,25 @@
     {
         "key": "cmd+[",
         "command": "editor.action.outdentLines"
+    },
+    {
+        "key": "shift+cmd+K",
+        "command": "workbench.action.navigateBack",
+        "when": "canNavigateBack"
+    },
+    {
+        "key": "ctrl+-",
+        "command": "-workbench.action.navigateBack",
+        "when": "canNavigateBack"
+    },
+    {
+        "key": "shift+cmd+J",
+        "command": "workbench.action.navigateForward",
+        "when": "canNavigateForward"
+    },
+    {
+        "key": "ctrl+shift+-",
+        "command": "-workbench.action.navigateForward",
+        "when": "canNavigateForward"
     },
 ]
