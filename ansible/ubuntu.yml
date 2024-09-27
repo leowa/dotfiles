@@ -1,12 +1,10 @@
 - hosts: ubuntu
-  gather_facts: true
   any_errors_fatal: true
   debugger: on_failed
   become: true
   become_user: root
   tasks:
     - name: install basic tools
-      delegate_to: localhost
       package:
         name:
           - vim
@@ -22,21 +20,60 @@
           - silversearcher-ag
           - ripgrep
           - python3-pip
+          - curl
+          - apt-transport-https
         state: present
       tags:
         - sudo
+        - package
 
     - name: use python3 as default python
-      delegate_to: localhost
       file:
         src: /usr/bin/python3
         dest: /usr/local/bin/python
         state: link
       tags:
         - sudo
+    - name: install kubectl commandline
+      block:
+        - name: check if kubernetes apt key exists
+          stat:
+            path: /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+          register: kubernetes_apt_keyring
+        - name: Download the public signing key for the Kubernetes package repositories
+          get_url:
+            url: https://pkgs.k8s.io/core:/stable:/v1.31/deb/Release.key
+            dest: /etc/apt/trusted.gpg.d/kubernetes-apt-keyring.key
+            mode: 0644
+          when: not kubernetes_apt_keyring.stat.exists
+        - name: dearmor and apt update
+          shell:
+            cmd: cat /etc/apt/trusted.gpg.d/kubernetes-apt-keyring.key | gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+          when: not kubernetes_apt_keyring.stat.exists
+
+        - name: add kubernetes debian repo
+          lineinfile:
+            path: /etc/apt/sources.list.d/kubernetes.list
+            line: 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.31/deb/ /'
+            mode: 0644
+            create: true
+        - name: apt update
+          shell:
+            cmd: apt update
+          when: not kubernetes_apt_keyring.stat.exists
+        - name: install kubectl
+          package:
+            name:
+              - kubectl
+        - name: install kubectx
+          snap:
+            name: kubectx
+            classic: true
+      tags:
+        - sudo
+        - package
 
     - name: install stable most recent docker-compose
-      delegate_to: localhost
       get_url:
         url: "https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-Linux-x86_64"
         dest: /usr/local/bin/docker-compose
@@ -46,19 +83,26 @@
         - sudo
 
     - name: add current user to docker group
-      delegate_to: localhost
       user:
         name: azhang
         groups: docker
         append: yes
+      tags:
+        - sudo
 
+- hosts: ubuntu
+  gather_facts: true
+  any_errors_fatal: true
+  debugger: on_failed
+  tasks:
     - name: Configure git
-      delegate_to: localhost
       git_config:
         name: "{{ item.name }}"
         scope: global
         value: "{{ item.value }}"
       with_items: "{{ git_config }}"
+      tags:
+        - conf
 
     - name: clone vim vundle
       git:
@@ -76,21 +120,29 @@
         src: files/vimrc
         dest: "{{ ansible_user_dir }}/.vimrc"
         mode: 0666
+      tags:
+        - conf
 
     - name: configure .tmux.conf
       copy:
         src: files/tmux-linux.conf
         dest: "{{ ansible_user_dir }}/.tmux.conf"
         mode: 0666
+      tags:
+        - conf
 
     - name: configure some alias
       copy:
         src: files/aliases-linux
         dest: "{{ ansible_user_dir }}/.bash_aliases"
         mode: 0666
+      tags:
+        - conf
 
-    - name: install python packages
+    - name: install python packages for py3 venv
       pip:
-        executable: /usr/bin/pip3
+        executable: "{{ ansible_user_dir }}/dev/py3/bin/pip"
         name:
-          - docker-compose
+          - ipython
+      tags:
+        - conf

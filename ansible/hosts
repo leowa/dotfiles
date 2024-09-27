@@ -1,11 +1,9 @@
-[all]
-local
-ubuntu
-
 [ubuntu]
 172.19.21.1
 
+[master]
+10.88.120.88
+
 [local]
 localhost
-
 

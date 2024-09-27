@@ -10,21 +10,28 @@ alias diff='colordiff'
 alias ..="cd .. ; pwd;ls"
 alias ...="cd ../.. ; pwd;ls"
 alias vi="/usr/bin/vim -v"
+alias ag='rg -i -A 3 --hidden'
+alias az='cd ~/dev/wish/azhang'
+alias h=history
 
 # alias for python venv
-alias ipy="source ~/dev/py/bin/activate; python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
 alias ipy3="source ~/dev/py3/bin/activate; python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
 
 # some directory shortcuts
-alias dvd="cd ~/dev/"
+alias dvd="cd ~/dev/wish"
 
 # shorcuts for kubectl commands
 alias k="kubectl"
 alias kn="kubens"
+alias kx="kubectx"
 alias kk="kubectl --namespace kube-system"
 alias kt="kubectl --namespace test"
 alias kd="kubectl --namespace default"
 alias ka="kubectl --all-namespaces=true get po  -owide"
+alias k6='kubectl --context app-06-prod.k8s.local'
+alias k6e='kubectl --context eks-06-prod.k8s.local'
 
 # use color term for tmux
 alias tmux="TERM=xterm-256color tmux"
+
+alias gp="sudo ip route add 172.26.0.0/16 via 172.19.20.1 && globalprotect connect -p gp.wish-cn.com"
