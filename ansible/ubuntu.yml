@@ -1,8 +1,9 @@
-- hosts: localhost
-  gather_facts: false
+- hosts: ubuntu
+  gather_facts: true
   any_errors_fatal: true
   debugger: on_failed
   become: true
+  become_user: root
   tasks:
     - name: install basic tools
       delegate_to: localhost

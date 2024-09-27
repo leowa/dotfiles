@@ -1,10 +1,11 @@
 [all]
-localhost
+local
+ubuntu
 
-[linux]
-localhost
+[ubuntu]
+172.19.21.1
 
-[dev]
+[local]
 localhost
 
 
