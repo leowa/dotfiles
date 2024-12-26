@@ -1,0 +1,8 @@
+alias ..="cd ../"
+alias ...="cd ../../"
+alias ls="ls -G"
+alias ll="ls -Gl"
+alias la="ls -althG"
+alias bb="cd $HOME/dev/bb"
+alias day="cd $HOME/dev/bb/diary"
+alias oss="cd $HOME/dev/oss"

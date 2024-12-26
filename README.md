@@ -5,10 +5,13 @@ configuration files for various tools
 
 - [ ] Include more other configurations such as vimrc
 
-## Install brew and ansible
+## Install Homebrew and ansible
 
 ```sh
-# install brew
+# install Homebrew
+# In China, try: /bin/bash -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
+# or `git clone https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git /usr/local/Homebrew` and `echo 'export PATH="/usr/local/Homebrew/bin:$PATH"' >> ~/.zshrc`
+# Refer: https://refblogs.com/article/748
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # install oh-my-zsh
@@ -86,7 +89,7 @@ Just run `vim/setup_vim.sh`
 
 ```sh
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-# start tmux and then install plugins by pressing prefix + I (capital i, as in Install) 
+# start tmux and then install plugins by pressing prefix + I (capital i, as in Install)
 tmux
 ```
 

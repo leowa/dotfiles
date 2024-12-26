@@ -3,63 +3,63 @@
   any_errors_fatal: true
   # debugger: on_failed
   tasks:
-    - name: install basic tools via brew
-      package:
-        name:
-          - vim
-          - watch
-          - tmux
-          - wget
-          - git
-          - telnet
-          - colordiff
-          - bash-completion
-          - font-hack-nerd-font
-          - tree
-          - jq
-          - zip
-          - autossh
-          - minikube
-          - kubernetes-cli
-          - kubectx
-          - helm
-          - firefox
-          - golang
-          - the_silver_searcher
-          - ripgrep
-          - hub
-          - pyenv
-          - mtr
-          - pwgen
-          - awscli
-          - coreutils # include utils such as `grealpath`
-          - ncdu # show disk usage
-          - gh # github cli
-          - java
-          - moreutils
-          - terraform
-          - terragrunt
-          - packer
-          - libffi  # libffi is a foreign function interface library. It provides a C programming language interface for calling natively compiled functions given information about the target function at run time instead of compile time.
-          - fzf # https://github.com/junegunn/fzf. To install useful key bindings and fuzzy completion: $(brew --prefix)/opt/fzf/install
-        state: present
-      tags:
-        - package
-
-    - name: install packages provided via brew cask
-      homebrew_cask:
-        name: "{{ item }}"
-        state: present
-      with_items:
-        - docker
-        - iterm2
-        - visual-studio-code
-        - mplayer-osx-extended
-        - wireshark
-        - adobe-acrobat-reader
-        - sublime-text
-      tags:
-        - package
+#     - name: install basic tools via brew
+#       package:
+#         name:
+#           - vim
+#           - watch
+#           - tmux
+#           - wget
+#           - git
+#           - telnet
+#           - colordiff
+#           - bash-completion
+#           - font-hack-nerd-font
+#           - tree
+#           - jq
+#           - zip
+#           - autossh
+#           - minikube
+#           - kubernetes-cli
+#           - kubectx
+#           - helm
+#           - firefox
+#           - golang
+#           - the_silver_searcher
+#           - ripgrep
+#           - hub
+#           - pyenv
+#           - mtr
+#           - pwgen
+#           - awscli
+#           - coreutils # include utils such as `grealpath`
+#           - ncdu # show disk usage
+#           - gh # github cli
+#           - java
+#           - moreutils
+#           - terraform
+#           - terragrunt
+#           - wireshark
+#          - packer
+#          - libffi  # libffi is a foreign function interface library. It provides a C programming language interface for calling natively compiled functions given information about the target function at run time instead of compile time.
+#          - fzf # https://github.com/junegunn/fzf. To install useful key bindings and fuzzy completion: $(brew --prefix)/opt/fzf/install
+#        state: present
+#      tags:
+#        - package
+#
+#    - name: install packages provided via brew cask
+#      homebrew_cask:
+#        name: "{{ item }}"
+#        state: present
+#      with_items:
+#        - docker
+#        - iterm2
+#        - visual-studio-code
+#        - mplayer-osx-extended
+#        - adobe-acrobat-reader
+#        - sublime-text
+#      tags:
+#        - package
 
     - name: Configure git
       delegate_to: localhost
@@ -89,12 +89,12 @@
         state: directory
       tags: ["local"]
 
-    - name: configure ~/.ssh/config
-      template:
-        src: templates/ssh_config.j2
-        dest: "{{ ansible_user_dir }}/.ssh/config"
-        mode: 0640
-      tags: ["local"]
+#    - name: configure ~/.ssh/config
+#      template:
+#        src: templates/ssh_config.j2
+#        dest: "{{ ansible_user_dir }}/.ssh/config"
+#        mode: 0640
+#      tags: ["local"]
 
     - name: install python packages
       pip:

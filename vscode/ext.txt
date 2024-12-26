@@ -7,6 +7,7 @@ k--kato.intellij-idea-keybindings
 korekontrol.saltstack
 lextudio.restructuredtext
 ms-python.python
+ms-python.black-formatter
 ms-vscode.cpptools
 ms-vscode.Go
 ms-vscode-remote.remote-ssh

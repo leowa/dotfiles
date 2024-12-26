@@ -116,7 +116,7 @@
         "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+w",
+        "key": "alt+w",
         "command": "workbench.action.quickSwitchWindow"
     },
     {
@@ -144,7 +144,7 @@
         "when": "editorTextFocus && inputFocus && notebookEditorFocused && vim.mode == 'Normal' && notebookEditorCursorAtBoundary != 'none' && notebookEditorCursorAtBoundary != 'top'"
     },
     {
-        "key": "cmd+s w",
+        "key": "ctrl+w",
         "command": "workbench.action.switchWindow"
     },
     {
@@ -190,5 +190,14 @@
         "key": "ctrl+shift+-",
         "command": "-workbench.action.navigateForward",
         "when": "canNavigateForward"
+    },
+    {
+        "key": "cmd+s",
+        "command": "-workbench.action.files.saveAll"
+    },
+    {
+        "key": "cmd+s",
+        "command": "-chatEditing.saveAllFiles",
+        "when": "hasUndecidedChatEditingResource && inChatInput && !chatSessionRequestInProgress && chatLocation == 'editing-session'"
     },
 ]
